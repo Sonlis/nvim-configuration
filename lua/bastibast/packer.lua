@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
+	  'nvim-telescope/telescope.nvim', tag = '0.1.5',
 	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
@@ -23,7 +23,6 @@ return require('packer').startup(function(use)
 
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
-  use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('gennaro-tedesco/nvim-jqx')
@@ -50,5 +49,16 @@ return require('packer').startup(function(use)
   }
   use("folke/zen-mode.nvim")
   use("github/copilot.vim")
+  use("folke/trouble.nvim")
+  use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+}
+  use 'nvim-tree/nvim-web-devicons'
+  use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+}
 end)
 
