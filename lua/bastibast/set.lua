@@ -25,6 +25,3 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
-vim.cmd('let g:netrw_bufsettings = "noma nomod nu nobl nowrap ro"')
-vim.cmd('let g:netrw_liststyle= 3')
