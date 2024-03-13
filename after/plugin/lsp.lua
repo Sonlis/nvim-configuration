@@ -1,18 +1,23 @@
 local lsp = require("lsp-zero")
+local lspconfig = require'lspconfig'
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
   'tsserver',
   'eslint',
-  'sumneko_lua',
   'rust_analyzer',
-  'gopls'
-
+  'gopls',
+  'pylsp',
+  'svelte',
+  'terraformls',
+  "lua_ls",
+  "yamlls",
+  "sqls"
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
+lsp.configure('lua_ls', {
     settings = {
         Lua = {
             diagnostics = {
@@ -21,6 +26,34 @@ lsp.configure('sumneko_lua', {
         }
     }
 })
+
+lspconfig.yamlls.setup({
+        settings = {
+            yaml = {
+            format = {
+                    enable = true,
+                    singleQuote = true,
+                    printWidth = 120,
+                },
+            schemaStore = {
+                url = "https://www.schemastore.org/api/json/catalog.json",
+                enable = false,
+            },
+          schemas = {
+            kubernetes = "*.yaml",
+            ["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+            ["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+            ["http://json.schemastore.org/prettierrc"] = ".prettierrc.{yml,yaml}",
+            ["http://json.schemastore.org/kustomization"] = "kustomization.{yml,yaml}",
+            ["https://json.schemastore.org/dependabot-v2"] = ".github/dependabot.{yml,yaml}",
+            ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "*docker-compose*.{yml,yaml}",
+          },
+                hover = true,
+                completion = true,
+                validate = true,
+            }
+        }
+    })
 
 
 local cmp = require('cmp')

@@ -2,10 +2,13 @@ require("bastibast.set")
 require("bastibast.remap")
 
 local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+
 local ThePrimeagenGroup = augroup('ThePrimeagen', {})
 
-local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
+
+local editor_startup = augroup('EditorStartup', {})
 
 function R(name)
     require("plenary.reload").reload_module(name)
@@ -28,6 +31,8 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
+autocmd({"VimEnter"}, {
+    group = editor_startup,
+    pattern = "*",
+    command = [[Neotree]],
+})
