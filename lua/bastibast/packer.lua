@@ -70,7 +70,5 @@ use {
       -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
     }
   }
-  vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
-
 end)
 
