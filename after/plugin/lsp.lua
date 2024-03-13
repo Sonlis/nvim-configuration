@@ -37,7 +37,6 @@ lspconfig.yamlls.setup({
                 },
             schemaStore = {
                 url = "https://www.schemastore.org/api/json/catalog.json",
-                enable = false,
             },
           schemas = {
             kubernetes = "*.yaml",

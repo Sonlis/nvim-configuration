@@ -71,5 +71,6 @@ use {
     }
   }
   vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+
 end)
 
