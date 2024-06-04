@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -206,6 +201,12 @@ _G.packer_plugins = {
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["yaml-companion.nvim"] = {
+    config = { "\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\16yaml_schema\19load_extension\14telescope\frequire\0" },
+    loaded = true,
+    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/yaml-companion.nvim",
+    url = "https://github.com/someone-stole-my-name/yaml-companion.nvim"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
@@ -218,6 +219,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for neo-tree.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%bastibast.plugins.neotree_config\frequire\0", "config", "neo-tree.nvim")
 time([[Config for neo-tree.nvim]], false)
+-- Config for: yaml-companion.nvim
+time([[Config for yaml-companion.nvim]], true)
+try_loadstring("\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\16yaml_schema\19load_extension\14telescope\frequire\0", "config", "yaml-companion.nvim")
+time([[Config for yaml-companion.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\nA\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0&bastibast.plugins.rosepine_config\frequire\0", "config", "rose-pine")
