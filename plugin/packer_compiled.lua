@@ -130,7 +130,7 @@ _G.packer_plugins = {
     url = "https://github.com/williamboman/mason.nvim"
   },
   ["neo-tree.nvim"] = {
-    config = { "\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%bastibast.plugins.neotree_config\frequire\0" },
+    config = { "\27LJ\2\n=\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\"config.plugins.neotree_config\frequire\0" },
     loaded = true,
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
@@ -144,11 +144,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
-  },
-  ["nvim-jqx"] = {
-    loaded = true,
-    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/nvim-jqx",
-    url = "https://github.com/gennaro-tedesco/nvim-jqx"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -176,20 +171,23 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rose-pine"] = {
-    config = { "\27LJ\2\nA\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0&bastibast.plugins.rosepine_config\frequire\0" },
+    config = { "\27LJ\2\n>\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0#config.plugins.rosepine_config\frequire\0" },
     loaded = true,
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["telescope.nvim"] = {
+  snap = {
     loaded = true,
-    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/telescope.nvim",
-    url = "https://github.com/nvim-telescope/telescope.nvim"
+    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/snap",
+    url = "https://github.com/camspiers/snap"
   },
-  ["trouble.nvim"] = {
-    loaded = true,
-    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/trouble.nvim",
-    url = "https://github.com/folke/trouble.nvim"
+  ["ultimate-autopair.nvim"] = {
+    config = { "\27LJ\2\nC\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\22ultimate-autopair\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/ultimate-autopair.nvim",
+    url = "https://github.com/altermo/ultimate-autopair.nvim"
   },
   undotree = {
     loaded = true,
@@ -200,33 +198,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
-  },
-  ["yaml-companion.nvim"] = {
-    config = { "\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\16yaml_schema\19load_extension\14telescope\frequire\0" },
-    loaded = true,
-    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/yaml-companion.nvim",
-    url = "https://github.com/someone-stole-my-name/yaml-companion.nvim"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/Users/bastienjeannelle/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: neo-tree.nvim
-time([[Config for neo-tree.nvim]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0%bastibast.plugins.neotree_config\frequire\0", "config", "neo-tree.nvim")
-time([[Config for neo-tree.nvim]], false)
--- Config for: yaml-companion.nvim
-time([[Config for yaml-companion.nvim]], true)
-try_loadstring("\27LJ\2\nP\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0'\2\3\0B\0\2\1K\0\1\0\16yaml_schema\19load_extension\14telescope\frequire\0", "config", "yaml-companion.nvim")
-time([[Config for yaml-companion.nvim]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
-try_loadstring("\27LJ\2\nA\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0&bastibast.plugins.rosepine_config\frequire\0", "config", "rose-pine")
+try_loadstring("\27LJ\2\n>\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0#config.plugins.rosepine_config\frequire\0", "config", "rose-pine")
 time([[Config for rose-pine]], false)
+-- Config for: neo-tree.nvim
+time([[Config for neo-tree.nvim]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\"config.plugins.neotree_config\frequire\0", "config", "neo-tree.nvim")
+time([[Config for neo-tree.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'ultimate-autopair.nvim'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au CmdlineEnter * ++once lua require("packer.load")({'ultimate-autopair.nvim'}, { event = "CmdlineEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

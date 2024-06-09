@@ -1,7 +1,7 @@
-require("bastibast.set")
-require("bastibast.remap")
-require("bastibast.autocmd")
-require("bastibast.lsp-commands")
+require("config.set")
+require("config.remap")
+require("config.autocmd")
+require("config.lsp-commands")
 
 vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
 
@@ -17,15 +17,14 @@ return require('packer').startup(function(use)
 
     -- File finder --
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        'camspiers/snap'
     }
     -- Color theme --
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
         config = function()
-            require("bastibast.plugins.rosepine_config")
+            require("config.plugins.rosepine_config")
         end
     })
     -- Syntax tree --
@@ -36,9 +35,6 @@ return require('packer').startup(function(use)
 
     -- Git integration --
     use('tpope/vim-fugitive')
-
-    -- JSON prettifier --
-    use('gennaro-tedesco/nvim-jqx')
 
     -- lsp and completion --
     use {
@@ -63,18 +59,13 @@ return require('packer').startup(function(use)
         }
     }
 
-    -- Zen mode --
-    use("folke/zen-mode.nvim")
-
-    -- Error debugger --
-    use("folke/trouble.nvim")
-
     -- Harpoon, to move quickly between files --
     use {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        requires = { { "nvim-lua/plenary.nvim" } }
+        requires = { {"nvim-lua/plenary.nvim"} }
     }
+
     -- Directory tree --
     use 'nvim-tree/nvim-web-devicons'
     use {
@@ -86,18 +77,17 @@ return require('packer').startup(function(use)
             "MunifTanjim/nui.nvim"
         },
         config = function()
-            require("bastibast.plugins.neotree_config")
+            require("config.plugins.neotree_config")
         end
     }
     use {
-        "someone-stole-my-name/yaml-companion.nvim",
-        requires = {
-            { "neovim/nvim-lspconfig" },
-            { "nvim-lua/plenary.nvim" },
-            { "nvim-telescope/telescope.nvim" },
-        },
-        config = function()
-            require("telescope").load_extension("yaml_schema")
-        end,
-    }
+    'altermo/ultimate-autopair.nvim',
+    event={'InsertEnter','CmdlineEnter'},
+    branch='v0.6', --recommended as each new version will have breaking changes
+    config=function ()
+        require('ultimate-autopair').setup({
+                --Config goes here
+                })
+    end,
+}
 end)
