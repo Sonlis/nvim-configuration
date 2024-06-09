@@ -1,5 +1,7 @@
-local util = require("after.ftplugin.utils")
-local root_dir = util.find_git_ancestor(vim.fn.getcwd())
+local root_files = { ".git" }
+local paths = vim.fs.find(root_files, {stop = vim.env.HOME})
+local root_dir = vim.fs.dirname(paths[1])
+
 if root_dir then
     vim.lsp.start({
         cmd = { 'yaml-language-server', '--stdio' },
