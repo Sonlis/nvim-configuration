@@ -1,1 +1,1 @@
-require("bastibast")
+require("config")

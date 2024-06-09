@@ -23,11 +23,12 @@ autocmd('TextYankPost', {
 autocmd({"VimEnter"}, {
     group = editor_startup,
     callback = function()
-        if vim.fn.isdirectory(vim.fn.expand('<afile>')) == 1 or vim.fn.expand('<afile>') == "" then
-            vim.cmd([[Neotree toggle left reveal_force_cwd]])
-            vim.api.nvim_win_close(1000, true)
+        local entrypoint = vim.fn.expand('<afile>')
+        if vim.fn.isdirectory(entrypoint) == 1 or vim.fn.expand(entrypoint) == "" then
+            vim.cmd('Neotree reveal_force_cwd toggle left')
+            -- vim.api.nvim_win_close(1000, true)
         else
-            vim.cmd([[Neotree toggle left reveal]])
+            vim.cmd('Neotree reveal_force_cwd toggle left')
             vim.api.nvim_set_current_win(1000)
         end
     end,
