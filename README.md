@@ -6,4 +6,9 @@ Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep), [fzf](ht
 ## Installation of language servers
 
 Terraform-ls: https://github.com/hashicorp/terraform-ls/blob/main/docs/installation.md
-Yamlls: `yarn global add yaml-language-server
+
+Yamlls: `yarn global add yaml-language-server`
+
+Lua-ls: https://luals.github.io/#install
+
+Go: https://github.com/golang/tools/tree/master/gopls
