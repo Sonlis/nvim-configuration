@@ -43,3 +43,32 @@ vim.api.nvim_create_autocmd('LspAttach', {
     bufmap('n', '<C-å>', '<cmd>lua vim.lsp.buf.code_action()<cr>')
   end
 })
+
+return {
+    "neovim/nvim-lspconfig",
+
+    dependencies = {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "j-hui/fidget.nvim",
+    },
+    config = function()
+        require("fidget").setup({})
+        require("mason").setup()
+        require("mason-lspconfig").setup({
+            ensure_installed = {
+                "lua_ls",
+                "gopls",
+                "terraformls",
+                "yamlls",
+                "pylsp"
+            },
+            handlers = {
+                function(server_name)
+                    require("lspconfig")[server_name].setup({ capabilities = capabilities })
+                end,
+            }
+        }
+        )
+    end
+}
