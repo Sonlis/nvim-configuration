@@ -24,3 +24,7 @@ autocmd("BufWinEnter", {
         vim.keymap.set("n", "<leader>gt", ":Git push -u origin ", opts);
     end,
 })
+
+return {
+    'tpope/vim-fugitive',
+}
