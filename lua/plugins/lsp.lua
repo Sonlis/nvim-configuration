@@ -1,3 +1,4 @@
+
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
@@ -69,7 +70,9 @@ return {
                 "yamlls",
                 "pylsp",
                 "html",
-                "angularls"
+                "angularls",
+                "helm_ls",
+                "clangd"
             },
             handlers = {
                 function(server_name)

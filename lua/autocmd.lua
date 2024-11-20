@@ -35,3 +35,14 @@ autocmd('TextYankPost', {
     end,
 })
 
+autocmd('BufEnter', {
+    group = editor_startup,
+    pattern = '*',
+    command = "Copilot disable"
+})
+
+autocmd('BufEnter', {
+    group = editor_startup,
+    pattern = '*_test.go',
+    command = "Copilot enable"
+})
