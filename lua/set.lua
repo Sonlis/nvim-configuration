@@ -26,3 +26,6 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 vim.opt.completeopt = "menu,menuone,noinsert" -- Do not insert, just show menu and let me choose
+vim.opt.termguicolors = true
+
+vim.g.nord_disable_background = true

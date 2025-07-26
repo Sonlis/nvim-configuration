@@ -16,6 +16,7 @@ return {
                 },
             },
             window = {
+                width = 25,
                 mappings = {
                     ["/"] = ""
                 }
