@@ -5,6 +5,7 @@ return {
         snap.maps {
             { "<Leader><Leader>", snap.config.file { producer = "ripgrep.file" } },
             { "<leader>g",        snap.config.vimgrep({}) },
+            { "<Leader>B",        snap.config.file {producer = "vim.buffer"} },
         }
     end
 }

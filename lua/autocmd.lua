@@ -20,7 +20,7 @@ autocmd({"VimEnter"}, {
             vim.cmd('Neotree reveal_force_cwd toggle left')
             vim.api.nvim_set_current_win(1000)
         end
-        vim.cmd.colorscheme("nord")
+        vim.cmd.colorscheme("catppuccin-mocha")
     end,
 })
 
