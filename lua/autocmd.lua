@@ -20,7 +20,6 @@ autocmd({"VimEnter"}, {
             vim.cmd('Neotree reveal_force_cwd toggle left')
             vim.api.nvim_set_current_win(1000)
         end
-        vim.cmd.colorscheme("catppuccin-mocha")
     end,
 })
 
@@ -68,7 +67,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         bufmap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<cr>')
 
         -- Displays a function's signature information
-        bufmap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
+        bufmap('n', 'gk', '<cmd>lua vim.lsp.buf.signature_help()<cr>')
 
         -- Renames all references to the symbol under the cursor
         bufmap('n', '<gR>', '<cmd>lua vim.lsp.buf.rename()<cr>')
@@ -88,4 +87,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
     end
   end,
+})
+
+-- Magic to make neovim theme fit the entire foot window
+vim.api.nvim_create_autocmd({'UIEnter', 'ColorScheme'}, {
+    callback = function()
+        local normal = vim.api.nvim_get_hl(0, { name = 'Normal' })
+        if normal.bg then
+            io.write(string.format('\027]11;#%06x\027\\', normal.bg))
+        end
+    end,
+})
+
+vim.api.nvim_create_autocmd('UILeave', {
+    callback = function()
+        io.write('\027]111\027\\')
+    end,
 })

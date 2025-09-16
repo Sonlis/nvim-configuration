@@ -19,4 +19,4 @@ require("lazy").setup({
     spec = { { import = "plugins" } },
 })
 
-vim.lsp.enable({"gopls", "lua_ls", "pylsp", "clangd"})
+vim.lsp.enable({"gopls", "lua_ls", "pylsp", "clangd", "bashls"})

@@ -29,3 +29,4 @@ vim.opt.completeopt = "menu,menuone,noinsert" -- Do not insert, just show menu a
 vim.opt.termguicolors = true
 
 vim.g.nord_disable_background = true
+vim.g.nord_contrast = true
