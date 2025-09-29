@@ -7,6 +7,7 @@ return {
     config = function()
         local dap = require 'dap'
         local ui = require "dapui"
+        local workdir = vim.fn.getcwd()
 
         require("dapui").setup()
 
@@ -40,7 +41,7 @@ return {
           else
             cb({
               type = 'executable',
-              command = '/home/bastibast/.venvs/debugpy/bin/python',
+              command = workdir .. '/.venv/bin/python',
               args = { '-m', 'debugpy.adapter' },
               options = {
                 source_filetype = 'python',
