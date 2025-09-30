@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./openstack-auth.nix
+  ];
+}
