@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
   general = ''
     env = XCURSOR_SIZE,24
@@ -143,13 +143,19 @@ in
       name = "Flat-Remix-GTK-Grey-Darkest";
     };
 
+    cursorTheme = {
+        name = "rose-pine-hyprcursor";
+        package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+        size = 22;
+    };
+
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
 
     font = {
-      name = "Sans";
+      name = "JetBrains Mono";
       size = 11;
     };
   };

@@ -9,11 +9,9 @@ let
     # Personal
     # Lenovo ThinkPad T470 14"
     persobast.usernames = [ "bastibast" ];
-    persobast.type = "persolap";
 
     # Work
     workibast.usernames = [ "workibast" ];
-    workibast.type = "infowork";
   };
 
 in
@@ -33,10 +31,6 @@ builtins.mapAttrs (
           options.username = lib.mkOption {
             type = lib.types.str;
             default = lib.lists.elemAt conf.usernames 0;
-          };
-          options.type = lib.mkOption {
-            type = lib.types.str;
-            default = conf.type;
           };
         }
       )

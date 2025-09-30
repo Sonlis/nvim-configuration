@@ -8,7 +8,7 @@
   ...
 }:
 let
-  inherit (config) username type;
+  inherit (config) username;
   specialArgs = {
     inherit inputs self;
   };
@@ -56,10 +56,6 @@ in
         options.user = lib.mkOption {
           type = lib.types.str;
           default = username;
-        };
-        options.type = lib.mkOption {
-          type = lib.types.str;
-          default = type;
         };
       };
   };

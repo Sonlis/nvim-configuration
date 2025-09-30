@@ -8,9 +8,11 @@ in
         settings = {
             preload = [
                 "${colors.wallpaper}"
+                "${colors.wallpaperWide}"
             ];
             wallpaper = [
-                ",${colors.wallpaper}"
+                "eDP-1,${colors.wallpaper}"
+                ",${colors.wallpaperWide}"
             ];
         };
     };

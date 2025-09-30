@@ -1,10 +1,5 @@
-{  pkgs, lib, config, ... }:
+{  pkgs, ... }:
 {
-  options = {
-    machine.type = lib.mkOption {
-        description = "Is it a work or personal laptop?";
-    };
-  }; 
   # Nix packages to install to $HOME
   #
   # Search for packages here: https://search.nixos.org/packages
@@ -56,9 +51,6 @@
         nil
         pkgs.nixfmt-rfc-style
 
-      ] ++ lib.optionals (config.type == "infowork") [
-        # Infomaniak
-        keepassxc
       ];
 
       # Programs natively supported by home-manager.

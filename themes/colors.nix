@@ -24,7 +24,8 @@
       bright7 = "fefcff";
       alpha = "0.9";
     };
-    wallpaper = "${../assets/wallpapers/rose_pine_maze.png}";
+    wallpaper = "${../assets/wallpapers/looking-far-away.jpg}";
+    wallpaperWide = "${../assets/wallpapers/looking-far-away-3840-2160.jpg}";
     hyprpanel = "rose_pine.json";
     hyprland = {
       active_border = "rgba(ff31748f)";

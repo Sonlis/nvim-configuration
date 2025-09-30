@@ -2,23 +2,23 @@
     exports = [
         "SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)"
     ];
-    aliases = [
-       "os=\"openstack\""
-    ];
     in 
     let
         formatted_exports = map (x: "export " +x) exports;
-        formatted_aliases = map(x: "alias " +x) aliases;
     in
     {
     programs.zsh = {
         autosuggestion.enable = true;
         syntaxHighlighting.enable = true;
+        enableCompletion = true;
+        shellAliases = {
+            os = "openstack";
+            k = "kubectl";
+        };
         initContent = ''
             bindkey "^[[1;5D" backward-word
             bindkey "^[[1;5C" forward-word
             ${builtins.concatStringsSep "\n" formatted_exports}
-            ${builtins.concatStringsSep "\n" formatted_aliases}
             eval "$(starship init zsh)"
         '';
         profileExtra = ''
