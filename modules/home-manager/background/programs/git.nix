@@ -10,6 +10,10 @@
             type = lib.types.str;
             default = "bastien.jeannelle@gmail.com";
         };
+        signingKey = lib.mkOption {
+            type = lib.types.str;
+            default = "";
+        };
     };
 
   config = {
@@ -17,6 +21,7 @@
         enable = true;
         userName = "${config.git.userName}";
         userEmail = "${config.git.email}";
+        signing.key = "3028905422445";
         extraConfig = {
           safe.directory = [ "/etc/nixos" ];
           pull.rebase = true;

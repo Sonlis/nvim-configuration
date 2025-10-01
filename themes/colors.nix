@@ -48,6 +48,54 @@
     };
   };
 
+  catppuccin_mocha = {
+    foot = {
+      background = "1e1e2e";
+      foreground = "cdd6f4";
+
+      regular0 = "45475a";
+      regular1 = "f38ba8";
+      regular2 = "a6e3a1";
+      regular3 = "f9e2af";
+      regular4 = "89b4fa";
+      regular5 = "f5c2e7";
+      regular6 = "94e2d5";
+      regular7 = "bac2de";
+
+      bright0 = "585b70";
+      bright1 = "f38ba8";
+      bright2 = "a6e3a1";
+      bright3 = "f9e2af";
+      bright4 = "89b4fa";
+      bright5 = "f5c2e7";
+      bright6 = "94e2d5";
+      bright7 = "a6adc8";
+      alpha = "0.9";
+    };
+    wallpaper = "${../assets/wallpapers/night-forest.png}";
+    wallpaperWide = "${../assets/wallpapers/night-forest.png}";
+    hyprpanel = "catppuccin_mocha.json";
+    hyprland = {
+      active_border = "rgba(ff31748f)";
+      inactive_border = "rgb(1f1d2e)";
+    };
+    hyprlock = {
+        outer_colors = "rgba(0031748f) rgba(ff31748f)" ;
+        check_colors = "rgba(00f6c177) rgba(fff6c177)";
+        fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
+        background_path = "${../assets/wallpapers/min-windows.jpg}";
+    };
+    starship = {
+        overlay = "#26233a";
+        love = "#eb6f92";
+        gold = "#f6c177";
+        rose = "#ebbcba";
+        pine = "#31748f";
+        foam = "#9ccfd8";
+        iris = "#c4a7e7";
+    };
+  };
+
   tokyo-night = {
     foot = {
       background = "1a1b26";
