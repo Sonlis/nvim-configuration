@@ -37,15 +37,6 @@
         fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
         background_path = "${../assets/wallpapers/min-windows.jpg}";
     };
-    starship = {
-        overlay = "#26233a";
-        love = "#eb6f92";
-        gold = "#f6c177";
-        rose = "#ebbcba";
-        pine = "#31748f";
-        foam = "#9ccfd8";
-        iris = "#c4a7e7";
-    };
   };
 
   catppuccin_mocha = {
@@ -70,10 +61,10 @@
       bright5 = "f5c2e7";
       bright6 = "94e2d5";
       bright7 = "a6adc8";
-      alpha = "0.9";
+      alpha = "0.8";
     };
-    wallpaper = "${../assets/wallpapers/night-forest.png}";
-    wallpaperWide = "${../assets/wallpapers/night-forest.png}";
+    wallpaper = "${../assets/wallpapers/bridge.jpg}";
+    wallpaperWide = "${../assets/wallpapers/bridge.jpg}";
     hyprpanel = "catppuccin_mocha.json";
     hyprland = {
       active_border = "rgba(ff31748f)";
@@ -84,15 +75,6 @@
         check_colors = "rgba(00f6c177) rgba(fff6c177)";
         fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
         background_path = "${../assets/wallpapers/min-windows.jpg}";
-    };
-    starship = {
-        overlay = "#26233a";
-        love = "#eb6f92";
-        gold = "#f6c177";
-        rose = "#ebbcba";
-        pine = "#31748f";
-        foam = "#9ccfd8";
-        iris = "#c4a7e7";
     };
   };
 

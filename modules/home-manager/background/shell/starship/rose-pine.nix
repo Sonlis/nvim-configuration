@@ -9,17 +9,17 @@
                 directory = {
                     truncation_length = 5;
                     truncation_symbol = "../";
-                    style = "fg:pine";
+                    style = "fg:text";
                 };
               git_branch = {
                 format = "(fg:overlay)[ $symbol $branch ]($style)(fg:overlay) ";
-                style = "fg:foam";
+                style = "fg:iris";
                 symbol = "";
               };
               git_status = {
                     disabled = false;
                     style = "fg:love";
-                    format = "(fgoverlay)([$all_status$ahead_behind]($style))(fg:overlay) ";
+                    format = "(fg:overlay)([$all_status$ahead_behind]($style))(fg:overlay) ";
                     up_to_date = "[ ✓ ](fg:iris)";
                     untracked = "[?\($count\)](fg:gold)";
                     stashed = "[\$](fg:iris)";

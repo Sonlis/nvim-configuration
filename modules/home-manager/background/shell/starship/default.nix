@@ -55,7 +55,7 @@ in
       command_timeout = 1000;
       add_newline = true;
       palettes = palettes;
-      palette = "rose-pine";
+      palette = config.theme;
       hostname = {
         ssh_only = true;
         style = "bold dimmed green";
