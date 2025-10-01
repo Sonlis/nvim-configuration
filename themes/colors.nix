@@ -22,7 +22,7 @@
       bright5 = "eed0ff";
       bright6 = "ffe5e3";
       bright7 = "fefcff";
-      alpha = "0.9";
+      alpha = "0.8";
     };
     wallpaper = "${../assets/wallpapers/looking-far-away.jpg}";
     wallpaperWide = "${../assets/wallpapers/looking-far-away-3840-2160.jpg}";
