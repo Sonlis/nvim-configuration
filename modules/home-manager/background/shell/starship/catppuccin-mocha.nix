@@ -9,11 +9,11 @@
                     vimcmd_symbol = "[❮](subtext1)";
                 };
                 directory = {
-                    style = "peach";
+                    style = "lavender";
                 };
                   git_branch = {
-                    format = "(fg:yellow)[ $symbol $branch ]($style)(fg:yellow) ";
-                    style = "yellow";
+                    format = "(fg:mauve)[ $symbol $branch ]($style)(fg:yellow) ";
+                    style = "mauve";
                     symbol = "";
                   };
               git_status = {

@@ -28,7 +28,7 @@
     wallpaperWide = "${../assets/wallpapers/looking-far-away-3840-2160.jpg}";
     hyprpanel = "rose_pine.json";
     hyprland = {
-      active_border = "rgb(d20f39)";
+      active_border = "rgb(f38ba8)";
       inactive_border = "rgb(1f1d2e)";
     };
     hyprlock = {
