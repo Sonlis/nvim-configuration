@@ -28,7 +28,7 @@
     wallpaperWide = "${../assets/wallpapers/looking-far-away-3840-2160.jpg}";
     hyprpanel = "rose_pine.json";
     hyprland = {
-      active_border = "rgba(ff31748f)";
+      active_border = "rgb(d20f39)";
       inactive_border = "rgb(1f1d2e)";
     };
     hyprlock = {
@@ -74,7 +74,7 @@
         outer_colors = "rgba(0031748f) rgba(ff31748f)" ;
         check_colors = "rgba(00f6c177) rgba(fff6c177)";
         fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
-        background_path = "${../assets/wallpapers/min-windows.jpg}";
+        background_path = "${../assets/wallpapers/windows-black.png}";
     };
   };
 
