@@ -64,6 +64,7 @@
     git
     lsof
     netbird
+    dnsutils
     uwsm
     vim
     wget
