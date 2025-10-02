@@ -22,7 +22,7 @@
       bright5 = "eed0ff";
       bright6 = "ffe5e3";
       bright7 = "fefcff";
-      alpha = "0.8";
+      alpha = "0.9";
     };
     wallpaper = "${../assets/wallpapers/looking-far-away.jpg}";
     wallpaperWide = "${../assets/wallpapers/looking-far-away-3840-2160.jpg}";
@@ -61,10 +61,10 @@
       bright5 = "f5c2e7";
       bright6 = "94e2d5";
       bright7 = "a6adc8";
-      alpha = "0.8";
+      alpha = "0.9";
     };
-    wallpaper = "${../assets/wallpapers/bridge.jpg}";
-    wallpaperWide = "${../assets/wallpapers/bridge.jpg}";
+    wallpaper = "${../assets/wallpapers/hollow-knight.jpg}";
+    wallpaperWide = "${../assets/wallpapers/hollow-knight.jpg}";
     hyprpanel = "catppuccin_mocha.json";
     hyprland = {
       active_border = "rgba(ff31748f)";
