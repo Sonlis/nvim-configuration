@@ -21,10 +21,16 @@
         enable = true;
         userName = "${config.git.userName}";
         userEmail = "${config.git.email}";
-        signing.key = "3028905422445";
+        signing = {
+          key = config.git.signingKey;
+          signByDefault = true;
+        };
         extraConfig = {
           safe.directory = [ "/etc/nixos" ];
           pull.rebase = true;
+          gpg = {
+              format = "ssh";
+          };
         };
     };
   };

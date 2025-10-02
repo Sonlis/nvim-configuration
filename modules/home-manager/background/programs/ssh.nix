@@ -10,6 +10,7 @@
             enable = true;
             enableDefaultConfig = false;
             matchBlocks = config.ssh.matchBlocks;
+            addKeysToAgent = "yes";
         }; 
     };
 }
