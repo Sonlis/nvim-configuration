@@ -31,8 +31,9 @@ lib.genAttrs unique-users (
           inherit palettes;
         };
       }
-    ] ++ (with inputs; [
-       sops-nix.nixosModules.sops 
+    ]
+    ++ (with inputs; [
+      sops-nix.nixosModules.sops
     ]);
   }
 )

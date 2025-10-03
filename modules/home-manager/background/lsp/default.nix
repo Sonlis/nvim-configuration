@@ -1,17 +1,27 @@
-{ config, pkgs, lib, ... }:
 {
-    options.ide =  lib.mkOption {
-        type = lib.types.str;
-        default = "nvim";
-        description = "Choose which IDE should be installed";
-    };
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
+  options.ide = lib.mkOption {
+    type = lib.types.str;
+    default = "nvim";
+    description = "Choose which IDE should be installed";
+  };
 
-    config = {
-        home.packages = [
+  config = {
+    home.packages = [
 
-        ] ++ (if config.ide == "nvim" then [
-            pkgs.shellcheck
+    ]
+    ++ (
+      if config.ide == "nvim" then
+        [
+          pkgs.shellcheck
         ]
-        else []);
-    };
+      else
+        [ ]
+    );
+  };
 }

@@ -1,11 +1,12 @@
-{ ... }: {
-    imports = [
-        ./programs
-        ./shell
-        ./lsp
-    ];
+{ ... }:
+{
+  imports = [
+    ./programs
+    ./shell
+    ./lsp
+  ];
 
-    options.git = {
-    
-    };
+  options.git = {
+
+  };
 }

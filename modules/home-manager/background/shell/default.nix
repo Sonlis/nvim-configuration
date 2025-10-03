@@ -26,23 +26,16 @@ in
     };
   };
 
-
   config = {
     programs = {
-        starship.enable = true;
+      starship.enable = true;
     }
     // lib.genAttrs shells (
       # loops over all terminal attributes defined above
       sh:
       lib.genAttrs [ "enable" ] (
         # for the enable attribute
-        val:
-        (
-          if config.shell.main == sh then
-            (lib.mkDefault true)
-          else
-            (lib.mkDefault false)
-        )
+        val: (if config.shell.main == sh then (lib.mkDefault true) else (lib.mkDefault false))
       )
     );
   };

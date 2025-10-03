@@ -15,11 +15,11 @@ in
   ];
 
   # Let Home Manager install and manage itself.
-  programs.home-manager.enable = true; 
+  programs.home-manager.enable = true;
   home = {
-      username = user;
-      homeDirectory = "/home/${user}";
-};
+    username = user;
+    homeDirectory = "/home/${user}";
+  };
 
   xdg.enable = true;
 

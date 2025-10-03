@@ -5,6 +5,7 @@
 
     settings = {
       bar = {
+        network.showWifiInfo = true;
         customModules.storage.paths = [ "/" ];
 
         layouts = {
@@ -61,8 +62,6 @@
             ];
           };
         };
-
-        network.showWifiInfo = true;
       };
     };
   };

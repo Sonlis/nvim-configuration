@@ -1,9 +1,9 @@
 { ... }:
 {
-    imports = [
-        ./desktop
-        #./programs
-        ./terminal
-        ./browser
-    ];
+  imports = [
+    ./desktop
+    #./programs
+    ./terminal
+    ./browser
+  ];
 }

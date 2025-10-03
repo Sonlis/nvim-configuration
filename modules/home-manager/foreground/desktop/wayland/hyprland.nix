@@ -107,33 +107,38 @@ in
         "$mod SHIFT, K, movewindow, u"
         "$mod SHIFT, J, movewindow, d"
 
-      "$mod SHIFT, L, movewindow, r"
-      "$mod SHIFT, H, movewindow, l"
-      "$mod SHIFT, K, movewindow, u"
-      "$mod SHIFT, J, movewindow, d"
+        "$mod SHIFT, L, movewindow, r"
+        "$mod SHIFT, H, movewindow, l"
+        "$mod SHIFT, K, movewindow, u"
+        "$mod SHIFT, J, movewindow, d"
 
-      "bind = $mod, N, togglespecialworkspace, magic"
-      "bind = $mod SHIFT, N, movetoworkspace, special:magic"
+        "bind = $mod, N, togglespecialworkspace, magic"
+        "bind = $mod SHIFT, N, movetoworkspace, special:magic"
 
-    ]
-    ++ (
-      builtins.concatLists (builtins.genList (i:
-        let ws = i + 1;
-        in [
-          "$mod, code:1${toString i}, workspace, ${toString ws}"
-	      ]
-        ) 
-      9)
-    ) ++ (
-      builtins.concatLists (builtins.genList (i:
-        let ws = i + 1;
-        in [
-          "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
-	      ]
-        ) 
-      9)
-    );
-  };
+      ]
+      ++ (builtins.concatLists (
+        builtins.genList (
+          i:
+          let
+            ws = i + 1;
+          in
+          [
+            "$mod, code:1${toString i}, workspace, ${toString ws}"
+          ]
+        ) 9
+      ))
+      ++ (builtins.concatLists (
+        builtins.genList (
+          i:
+          let
+            ws = i + 1;
+          in
+          [
+            "$mod SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
+          ]
+        ) 9
+      ));
+    };
   };
   gtk = {
     enable = true;
@@ -144,9 +149,9 @@ in
     };
 
     cursorTheme = {
-        name = "rose-pine-hyprcursor";
-        package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-        size = 22;
+      name = "rose-pine-hyprcursor";
+      package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
+      size = 22;
     };
 
     iconTheme = {

@@ -2,7 +2,7 @@
   inputs,
   self,
   lib,
-  system
+  system,
 }:
 let
   machines = {

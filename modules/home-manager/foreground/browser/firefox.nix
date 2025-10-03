@@ -8,14 +8,14 @@
       name = "Bastibast";
     };
     policies = {
-        DisableTelemetry = true;
-        DisableFirefoxStudies = true;
-        EnableTrackingProtection = {
-          Value= true;
-          Locked = true;
-          Cryptomining = true;
-          Fingerprinting = true;
-        };
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      EnableTrackingProtection = {
+        Value = true;
+        Locked = true;
+        Cryptomining = true;
+        Fingerprinting = true;
+      };
       ExtensionSettings = {
         # Bitwarden
         "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {

@@ -32,10 +32,10 @@
       inactive_border = "rgb(1f1d2e)";
     };
     hyprlock = {
-        outer_colors = "rgba(0031748f) rgba(ff31748f)" ;
-        check_colors = "rgba(00f6c177) rgba(fff6c177)";
-        fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
-        background_path = "${../assets/wallpapers/min-windows.jpg}";
+      outer_colors = "rgba(0031748f) rgba(ff31748f)";
+      check_colors = "rgba(00f6c177) rgba(fff6c177)";
+      fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
+      background_path = "${../assets/wallpapers/min-windows.jpg}";
     };
   };
 
@@ -71,10 +71,10 @@
       inactive_border = "rgb(1f1d2e)";
     };
     hyprlock = {
-        outer_colors = "rgba(0031748f) rgba(ff31748f)" ;
-        check_colors = "rgba(00f6c177) rgba(fff6c177)";
-        fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
-        background_path = "${../assets/wallpapers/windows-black.png}";
+      outer_colors = "rgba(0031748f) rgba(ff31748f)";
+      check_colors = "rgba(00f6c177) rgba(fff6c177)";
+      fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
+      background_path = "${../assets/wallpapers/windows-black.png}";
     };
   };
 

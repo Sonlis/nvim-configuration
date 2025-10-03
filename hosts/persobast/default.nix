@@ -1,7 +1,8 @@
-{ ... }: {
-    imports = [
-        ./configuration.nix
-        ./hardware-configuration.nix
-        ./session.nix
-    ];
+{ ... }:
+{
+  imports = [
+    ./configuration.nix
+    ./hardware-configuration.nix
+    ./session.nix
+  ];
 }

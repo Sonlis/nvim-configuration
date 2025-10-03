@@ -10,14 +10,13 @@ in
 {
   imports = [
     ./hypr
-    #./firefox.nix
     ./foot.nix
   ];
 
   options = {
     theme = lib.mkOption {
-        default = "rose-pine";
-        description = "Which color scheme to use";
+      default = "";
+      description = "Which color scheme to use";
     };
     colors = lib.mkOption {
     };
