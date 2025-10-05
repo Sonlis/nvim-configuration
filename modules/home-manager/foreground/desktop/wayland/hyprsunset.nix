@@ -12,7 +12,7 @@
         temperature = 5000;
       }
       {
-        time = "2200";
+        time = "22:00";
         temperature = 4000;
       }
     ];

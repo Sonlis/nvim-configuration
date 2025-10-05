@@ -35,7 +35,6 @@
       # Dev
       go
       llvmPackages_21.libcxxClang
-      neovim
       poetry
       python3
 
@@ -43,13 +42,6 @@
       nautilus
       qimgv
       netbird
-
-      # Lsps
-      bash-language-server
-      gopls
-      lua-language-server
-      nil
-      pkgs.nixfmt-rfc-style
 
     ];
 

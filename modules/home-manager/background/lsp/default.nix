@@ -17,8 +17,14 @@
     ]
     ++ (
       if config.ide == "nvim" then
-        [
-          pkgs.shellcheck
+        with pkgs; [
+          neovim
+          shellcheck
+          bash-language-server
+          gopls
+          lua-language-server
+          nil
+          nixfmt-rfc-style
         ]
       else
         [ ]
