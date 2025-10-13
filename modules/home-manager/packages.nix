@@ -36,13 +36,25 @@
       go
       llvmPackages_21.libcxxClang
       poetry
-      python3
 
       discord
       nautilus
       qimgv
       netbird
-
+      (python3.withPackages (
+        ps: with ps; [
+          python-lsp-server
+          python-lsp-jsonrpc
+          python-lsp-black
+          python-lsp-ruff
+          pyls-isort
+          pyls-flake8
+          flake8
+          isort
+          black
+          ruff
+        ]
+      ))
     ];
 
     # Programs natively supported by home-manager.

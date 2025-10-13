@@ -17,7 +17,8 @@
     ]
     ++ (
       if config.ide == "nvim" then
-        with pkgs; [
+        with pkgs;
+        [
           neovim
           shellcheck
           bash-language-server
