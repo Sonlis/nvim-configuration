@@ -36,6 +36,7 @@
       go
       llvmPackages_21.libcxxClang
       poetry
+      terraform
 
       discord
       nautilus
@@ -43,6 +44,7 @@
       netbird
       (python3.withPackages (
         ps: with ps; [
+          ansible-core
           python-lsp-server
           python-lsp-jsonrpc
           python-lsp-black
