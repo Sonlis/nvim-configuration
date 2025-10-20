@@ -5,12 +5,12 @@ in
 {
   options = {
     espanso.matches = lib.mkOption {
-      default = { };
+      default = [ ];
       description = "List of espanso matches";
-      type = lib.types.attrs;
+      type = lib.types.listOf (lib.types.attrs);
     };
   };
-  config = lib.mkIf (cfg.matches != { }) {
+  config = lib.mkIf (cfg.matches != [ ]) {
     services.espanso = {
       enable = true;
       configs = {
@@ -20,7 +20,11 @@ in
           };
         };
       };
-      matches = cfg.matches;
+      matches = {
+        default = {
+          base = cfg.matches;
+        };
+      };
     };
   };
 }
