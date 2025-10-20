@@ -25,7 +25,17 @@
       inputs.hyprlang.follows = "hyprland/hyprlang";
     };
 
-    walker.url = "github:abenz1267/walker";
+    infomanixak = {
+        url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    elephant.url = "github:abenz1267/elephant";
+
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
   };
 
   outputs =

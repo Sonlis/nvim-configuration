@@ -33,6 +33,7 @@
       yubikey-personalization
 
       # Dev
+      awscli2
       go
       llvmPackages_21.libcxxClang
       poetry
@@ -45,6 +46,7 @@
       (python3.withPackages (
         ps: with ps; [
           ansible-core
+          openstacksdk
           python-lsp-server
           python-lsp-jsonrpc
           python-lsp-black
@@ -55,6 +57,11 @@
           isort
           black
           ruff
+          pytz
+
+          ## Required for some ansible roles in personal-environment
+          botocore
+          boto3
         ]
       ))
     ];
