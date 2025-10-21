@@ -16,7 +16,7 @@ in
       configs = {
         default = {
           keyboard_layout = {
-            layout = "us";
+            layout = "'us'";
           };
         };
       };
