@@ -3,6 +3,5 @@
   imports = [
     ./configuration.nix
     ./hardware-configuration.nix
-    ./session.nix
   ];
 }
