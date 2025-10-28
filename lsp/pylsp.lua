@@ -12,14 +12,14 @@ return {
     settings = {
         pylsp = {
             plugins = {
-                pycodestyle = {
-                    ignore = { 'E501' }
+                ruff = {
+                    enabled = true,
                 },
                 pylint = {
-                    enabled = true,
-                    args = {
-                        "--runtime-typing=true"
-                    }
+                    enabled = false,
+                },
+                flake8 = {
+                    enabled = false
                 }
             }
         }
