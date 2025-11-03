@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 let
   general = ''
     env = XCURSOR_SIZE,24
@@ -29,6 +29,7 @@ let
     bindl = , XF86AudioPause, exec, playerctl play-pause
     bindl = , XF86AudioPlay, exec, playerctl play-pause
     bindl = , XF86AudioPrev, exec, playerctl previous
+
 
     dwindle {
         pseudotile = true
@@ -81,6 +82,7 @@ in
         "systemctl --user start hyprpolkitagent"
         "wl-paste --type text --watch cliphist store"
         "walker --gapplication-service"
+        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 
       bind = [
@@ -100,7 +102,7 @@ in
 
         "$mod SHIFT, I, togglesplit"
         "$mod SHIFT, O, exec, hyprlock"
-        "$mod SHIFT, S, exec, grim -g \"$(slurp -d)\" - >> /home/bastibast/Pictures/screenshots/$(date +\"%Y-%m-%d %H:%M\")"
+        "$mod SHIFT, S, exec, grim -g \"$(slurp -d)\" - >> /home/${config.user}/Pictures/screenshots/$(date +\"%Y-%m-%d %H:%M\")"
 
         "$mod SHIFT, L, movewindow, r"
         "$mod SHIFT, H, movewindow, l"
@@ -155,8 +157,11 @@ in
     };
 
     iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
+      name = "Papirus-Dark";
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "mocha";
+        accent = "lavender";
+      };
     };
 
     font = {
