@@ -47,17 +47,14 @@
         ps: with ps; [
           ansible-core
           openstacksdk
+          pytz
           python-lsp-server
-          python-lsp-jsonrpc
-          python-lsp-black
           python-lsp-ruff
+          pylint
           pyls-isort
-          pyls-flake8
-          flake8
           isort
           black
           ruff
-          pytz
 
           ## Required for some ansible roles in personal-environment
           botocore
