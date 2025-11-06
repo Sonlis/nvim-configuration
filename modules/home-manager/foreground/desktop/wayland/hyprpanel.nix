@@ -1,65 +1,67 @@
-{ ... }:
+{ lib, config, ... }:
 {
-  programs.hyprpanel = {
-    enable = true;
+  config = lib.mkIf (config.desktop == "hyprland") {
+    programs.hyprpanel = {
+      enable = true;
 
-    settings = {
-      bar = {
-        network.showWifiInfo = true;
-        customModules.storage.paths = [ "/" ];
+      settings = {
+        bar = {
+          network.showWifiInfo = true;
+          customModules.storage.paths = [ "/" ];
 
-        layouts = {
-          "0" = {
-            left = [
-              "dashboard"
-              "workspaces"
-              "windowtitle"
-            ];
-            middle = [
-              "media"
-              "clock"
-            ];
-            right = [
-              "volume"
-              "network"
-              "bluetooth"
-              "battery"
-              "systray"
-              "notifications"
-            ];
-          };
+          layouts = {
+            "0" = {
+              left = [
+                "dashboard"
+                "workspaces"
+                "windowtitle"
+              ];
+              middle = [
+                "media"
+                "clock"
+              ];
+              right = [
+                "volume"
+                "network"
+                "bluetooth"
+                "battery"
+                "systray"
+                "notifications"
+              ];
+            };
 
-          "1" = {
-            left = [
-              "dashboard"
-              "workspaces"
-              "windowtitle"
-            ];
-            middle = [
-              "clock"
-              "media"
-            ];
-            right = [
-              "volume"
-              "network"
-              "bluetooth"
-              "battery"
-              "systray"
-              "notifications"
-            ];
-          };
+            "1" = {
+              left = [
+                "dashboard"
+                "workspaces"
+                "windowtitle"
+              ];
+              middle = [
+                "clock"
+                "media"
+              ];
+              right = [
+                "volume"
+                "network"
+                "bluetooth"
+                "battery"
+                "systray"
+                "notifications"
+              ];
+            };
 
-          "2" = {
-            left = [
-              "dashboard"
-              "workspaces"
-              "windowtitle"
-            ];
-            middle = [ "media" ];
-            right = [
-              "volume"
-              "notifications"
-            ];
+            "2" = {
+              left = [
+                "dashboard"
+                "workspaces"
+                "windowtitle"
+              ];
+              middle = [ "media" ];
+              right = [
+                "volume"
+                "notifications"
+              ];
+            };
           };
         };
       };

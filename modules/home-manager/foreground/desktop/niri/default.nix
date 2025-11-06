@@ -1,8 +1,6 @@
 {
-  inputs,
   lib,
   config,
-  pkgs,
   ...
 }:
 let
@@ -14,13 +12,4 @@ in
   imports = [
   ]
   ++ files;
-
-  config = lib.mkIf (config.desktop == "hyprland") {
-    home.packages = with pkgs; [
-      hyprcursor
-      hypridle
-      hyprlock
-      hyprpaper
-    ];
-  };
 }

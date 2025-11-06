@@ -1,4 +1,9 @@
-{ lib, config, ... }:
+{
+  inputs,
+  lib,
+  config,
+  ...
+}:
 
 let
   # Path to the folder that matches the chosen desktop
@@ -9,15 +14,9 @@ let
   imports = builtins.map (desktop: ./. + builtins.unsafeDiscardStringContext "/${desktop}") desktops;
 in
 {
-  imports = imports;
+  imports = [ inputs.walker.homeManagerModules.default ] ++ imports;
   options.desktop = lib.mkOption {
     type = lib.types.str;
     description = "Choose which desktop environment should be configured for the user";
-  };
-
-  config = {
-    desktop = lib.genAttrs desktops (name: {
-      enable = lib.mkDefault (config.desktop == name);
-    });
   };
 }
