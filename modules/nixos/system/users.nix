@@ -6,7 +6,7 @@
       "wheel"
       "networkmanager"
     ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
   security.sudo = {

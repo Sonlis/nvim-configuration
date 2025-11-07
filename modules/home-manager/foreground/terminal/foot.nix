@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 {
   programs.foot = {
     enable = true;
@@ -7,7 +7,7 @@
       main = {
         term = "xterm-256color";
         font = "JetBrains Mono NF:size=12";
-        shell = "zsh";
+        shell = "${config.shell.main}";
       };
       key-bindings = {
         show-urls-launch = "Control+Shift+p";
