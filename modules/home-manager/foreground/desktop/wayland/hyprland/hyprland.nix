@@ -149,32 +149,5 @@ in
         ));
       };
     };
-    gtk = {
-      enable = true;
-
-      theme = {
-        package = pkgs.flat-remix-gtk;
-        name = "Flat-Remix-GTK-Grey-Darkest";
-      };
-
-      cursorTheme = {
-        name = "rose-pine-hyprcursor";
-        package = inputs.rose-pine-hyprcursor.packages.${pkgs.system}.default;
-        size = 22;
-      };
-
-      iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.catppuccin-papirus-folders.override {
-          flavor = "mocha";
-          accent = "lavender";
-        };
-      };
-
-      font = {
-        name = "JetBrains Mono";
-        size = 11;
-      };
-    };
   };
 }
