@@ -5,6 +5,8 @@ local yank_group = augroup('HighlightYank', {})
 
 local editor_startup = augroup('EditorStartup', {})
 
+local on_save = augroup('OnSave', {})
+
 -- Neat little trick to open neotree on startup:
 -- If we open giving a directory or no arguments, opens neotree in a way that it remains on the left
 -- If a file is given as argument, do not open neotree
@@ -97,5 +99,13 @@ vim.api.nvim_create_autocmd({'UIEnter', 'ColorScheme'}, {
 vim.api.nvim_create_autocmd('UILeave', {
     callback = function()
         io.write('\027]111\027\\')
+    end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+    group = on_save,
+    buffer = bufnr,
+    callback = function()
+        vim.lsp.buf.format()
     end,
 })

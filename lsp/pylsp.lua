@@ -16,7 +16,8 @@ return {
                     enabled = true,
                 },
                 pylint = {
-                    enabled = false,
+                    enabled = true,
+
                 },
                 flake8 = {
                     enabled = false
