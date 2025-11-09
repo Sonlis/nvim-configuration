@@ -12,8 +12,8 @@ let
 
         Mod+T hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}"; }
         Mod+E hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
-        Mod+P hotkey-overlay-title="Run an Application: walker" { spawn "walker -m clipboard"; }
-        Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+        Mod+P hotkey-overlay-title="Run an Application: walker" { spawn "walker" "-m" "clipboard"; }
+        Mod+Shift+O hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock" "--clock" "--indicator"; }
 
         // The allow-when-locked=true property makes them work even when the session is locked.
         // Using spawn-sh allows to pass multiple arguments together with the command.
@@ -287,10 +287,7 @@ let
         } 
     }
   '';
-  spawn-at-startup = ''
-    spawn-at-startup "mako"
-    spawn-at-startup "waybar"
-  '';
+  spawn-at-startup = '''';
 in
 {
   options.niri = {
@@ -301,38 +298,6 @@ in
     };
   };
   config = lib.mkIf (config.desktop == "niri") {
-    programs = {
-      waybar.enable = true;
-    };
-    services = {
-      mako.enable = true;
-    };
-    systemd.user.services.mako = {
-      Install = {
-        WantedBy = [ "niri" ];
-      };
-    };
-    systemd.user.services.swaybg = {
-      Unit = {
-        Description = "Background image utility";
-        PartOf = "graphical-session.target";
-        After = "graphical-session.target";
-        Requisite = "graphical-session.target";
-      };
-      Install = {
-        WantedBy = [ "niri" ];
-      };
-      Service = {
-        Restart = "on-failure";
-        ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${config.colors.wallpaper}";
-      };
-
-    };
-    systemd.user.services.waybar = {
-      Install = {
-        WantedBy = [ "niri" ];
-      };
-    };
     xdg.configFile.niriconfig = {
       enable = true;
       target = "niri/config.kdl";

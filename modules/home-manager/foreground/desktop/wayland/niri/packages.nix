@@ -10,7 +10,7 @@
         [
           swaybg
           swayidle
-          swaylock
+          swaylock-effects
           xdg-desktop-portal-gtk
         ]
       else
