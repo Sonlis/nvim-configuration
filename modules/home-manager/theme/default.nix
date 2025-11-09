@@ -9,7 +9,7 @@ let
 in
 {
   imports = [
-    ./hypr
+    ./wayland
     ./foot.nix
   ];
 

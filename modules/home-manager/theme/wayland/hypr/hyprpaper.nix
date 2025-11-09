@@ -1,8 +1,9 @@
-{ config, ... }:
+{ config, lib, ... }:
 let
   colors = config.colors;
 in
 {
+  config = lib.mkIf (config.desktop == "hyprland") {
   services.hyprpaper = {
     enable = true;
     settings = {
@@ -15,5 +16,6 @@ in
         ",${colors.wallpaperWide}"
       ];
     };
+  };
   };
 }

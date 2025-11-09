@@ -1,9 +1,10 @@
-{ config, ... }:
+{ config, lib, ... }:
 let
   font = "JetBrains Mono";
   colors = config.colors;
 in
 {
+  config = lib.mkIf (config.desktop == "hyprland") {
   programs.hyprlock.settings = {
     background = {
       monitor = "";
@@ -39,5 +40,6 @@ in
       halign = "center";
       valign = "center";
     };
+  };
   };
 }

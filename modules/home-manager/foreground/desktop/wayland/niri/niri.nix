@@ -10,7 +10,7 @@ let
     binds {
         Mod+Shift+Slash { show-hotkey-overlay; }
 
-        Mod+T hotkey-overlay-title="Open a Terminal: foot" { spawn "${config.terminals.main}"; }
+        Mod+T hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}"; }
         Mod+E hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
         Mod+P hotkey-overlay-title="Run an Application: walker" { spawn "walker -m clipboard"; }
         Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
@@ -282,10 +282,15 @@ let
   layout = ''
     layout {
         focus-ring {
-            width 4
+            width 2
             active-color "#7fc8ff"
         } 
     }
+  '';
+  spawn-at-startup = ''
+    spawn-at-startup "mako"
+    spawn-at-startup "waybar"
+    spawn-at-startup "swaybg -i ${config.colors.wallpaper}"
   '';
 in
 {
@@ -297,6 +302,7 @@ in
     };
   };
   config = lib.mkIf (config.desktop == "niri") {
+    programs.waybar.enable = true;
     xdg.configFile.niriconfig = {
       enable = true;
       target = "niri/config.kdl";
@@ -310,6 +316,7 @@ in
         ${layout}
         ${input}
         ${binds}
+        ${spawn-at-startup}
       '';
     };
   };

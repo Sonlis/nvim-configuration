@@ -21,7 +21,7 @@ in
           ''
         else if config.desktop == "niri" then
           ''
-            niri-session
+            niri-session -l
           ''
         else
           "";

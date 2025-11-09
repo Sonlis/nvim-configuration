@@ -15,8 +15,8 @@
     };
 
     sops-nix = {
-        url = "github:Mic92/sops-nix";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     rose-pine-hyprcursor = {
@@ -26,9 +26,11 @@
     };
 
     infomanixak = {
-        url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin.url = "github:catppuccin/nix";
 
     elephant.url = "github:abenz1267/elephant?rev=f37977c557f2c570a2e0b1c9c49698b104b3b1d0";
 
@@ -41,6 +43,7 @@
   outputs =
     inputs@{
       self,
+      catppuccin,
       nixpkgs,
       home-manager,
       hyprland,
