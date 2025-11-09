@@ -290,7 +290,6 @@ let
   spawn-at-startup = ''
     spawn-at-startup "mako"
     spawn-at-startup "waybar"
-    spawn-at-startup "swaybg -i ${config.colors.wallpaper}"
   '';
 in
 {
@@ -302,7 +301,38 @@ in
     };
   };
   config = lib.mkIf (config.desktop == "niri") {
-    programs.waybar.enable = true;
+    programs = {
+      waybar.enable = true;
+    };
+    services = {
+      mako.enable = true;
+    };
+    systemd.user.services.mako = {
+      Install = {
+        WantedBy = [ "niri" ];
+      };
+    };
+    systemd.user.services.swaybg = {
+      Unit = {
+        Description = "Background image utility";
+        PartOf = "graphical-session.target";
+        After = "graphical-session.target";
+        Requisite = "graphical-session.target";
+      };
+      Install = {
+        WantedBy = [ "niri" ];
+      };
+      Service = {
+        Restart = "on-failure";
+        ExecStart = "${pkgs.swaybg}/bin/swaybg -i ${config.colors.wallpaper}";
+      };
+
+    };
+    systemd.user.services.waybar = {
+      Install = {
+        WantedBy = [ "niri" ];
+      };
+    };
     xdg.configFile.niriconfig = {
       enable = true;
       target = "niri/config.kdl";
