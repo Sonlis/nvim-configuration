@@ -239,7 +239,7 @@ let
         // Mod+Space       { switch-layout "next"; }
         // Mod+Shift+Space { switch-layout "prev"; }
 
-        Print { screenshot; }
+        Mod+S { screenshot; }
         Ctrl+Print { screenshot-screen; }
         Alt+Print { screenshot-window; }
 
@@ -287,6 +287,14 @@ let
     }
   '';
   spawn-at-startup = '''';
+  cursor = ''
+        cursor {
+        xcursor-theme "breeze_cursors"
+        xcursor-size 24
+        hide-when-typing
+        hide-after-inactive-ms 10000
+    }
+  '';
 in
 {
   options.niri = {
@@ -311,6 +319,7 @@ in
         ${input}
         ${binds}
         ${spawn-at-startup}
+        ${cursor}
       '';
     };
   };

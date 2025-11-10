@@ -26,7 +26,7 @@
               mode-mon-col = 3;
               on-scroll = 1;
             };
-            format = "󰸗 {:%a %b %Y %I:%M %p}";
+            format = "󰸗 {:%a %d %b %Y %I:%M %p}";
             tooltip-format = "<tt>{calendar}</tt>";
           };
           margin-left = 5;

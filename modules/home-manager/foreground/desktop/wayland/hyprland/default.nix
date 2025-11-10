@@ -22,5 +22,7 @@ in
       hyprlock
       hyprpaper
     ];
+    gtk = {
+    };
   };
 }
