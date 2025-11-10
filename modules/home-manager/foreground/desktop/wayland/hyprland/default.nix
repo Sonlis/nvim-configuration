@@ -21,6 +21,7 @@ in
       hypridle
       hyprlock
       hyprpaper
+      nwg-displays
     ];
     gtk = {
     };

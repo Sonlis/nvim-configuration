@@ -25,7 +25,6 @@
       # Tools
       k9s
       networkmanagerapplet
-      nwg-displays
       openstackclient
       pavucontrol
       thunderbird
