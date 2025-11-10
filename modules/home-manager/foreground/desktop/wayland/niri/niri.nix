@@ -1,7 +1,5 @@
 {
   config,
-  pkgs,
-  inputs,
   lib,
   ...
 }:
@@ -285,6 +283,7 @@ let
             width 2
             active-color "#7fc8ff"
         } 
+        gaps 10
     }
   '';
   spawn-at-startup = '''';

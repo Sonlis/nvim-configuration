@@ -8,6 +8,8 @@
       if config.desktop == "niri" then
         with pkgs;
         [
+          helvum
+          playerctl
           swaybg
           swayidle
           swaylock-effects

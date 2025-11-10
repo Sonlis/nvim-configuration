@@ -13,9 +13,6 @@
         After = "graphical-session.target";
         Requisite = "graphical-session.target";
       };
-      Install = {
-        WantedBy = [ "niri" ];
-      };
       Service = {
         Restart = "on-failure";
         ExecStart = "${pkgs.swayidle}/bin/swayidle -w timeout 601 'niri msg action power-off-monitors' timeout 600 '${pkgs.swaylock-effects}/bin/swaylock -f' before-sleep '${pkgs.swaylock-effects}/bin/swaylock --clock --indicator -f'";
