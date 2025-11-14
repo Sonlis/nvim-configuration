@@ -14,6 +14,7 @@
           swayidle
           swaylock-effects
           xdg-desktop-portal-gtk
+          xwayland-satellite
         ]
       else
         [ ]

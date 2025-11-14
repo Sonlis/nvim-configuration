@@ -36,6 +36,8 @@
       go
       llvmPackages_21.libcxxClang
       poetry
+      lua
+      luarocks
       terraform
 
       discord

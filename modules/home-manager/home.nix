@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, inputs, ... }:
 let
   inherit (config) user;
 in
@@ -12,7 +12,10 @@ in
     ./gc.nix
     ./packages.nix
     #./secrets.nix
+    inputs.swissknife.homeManagerModules.default
   ];
+
+  programs.swissknife.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

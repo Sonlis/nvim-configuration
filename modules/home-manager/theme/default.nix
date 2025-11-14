@@ -11,6 +11,7 @@ in
   imports = [
     ./wayland
     ./foot.nix
+    ./fish.nix
   ];
 
   options = {

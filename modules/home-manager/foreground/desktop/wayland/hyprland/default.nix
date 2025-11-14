@@ -23,7 +23,5 @@ in
       hyprpaper
       nwg-displays
     ];
-    gtk = {
-    };
   };
 }

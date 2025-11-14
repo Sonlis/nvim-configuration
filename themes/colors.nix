@@ -41,6 +41,34 @@
 
   catppuccin_mocha = {
     name = "catppuccin_mocha";
+    fish = {
+      normal = "cdd6f4";
+      command = "89b4fa";
+      param = "f2cdcd";
+      keyword = "f38ba8";
+      quote = "a6e3a1";
+      redirection = "f5c2e7";
+      end = "fab387";
+      comment = "7f849c";
+      error = "f38ba8";
+      gray = "6c7086";
+      selection = "313244";
+      search = "313244";
+      option = "a6e3a1";
+      operator = "f5c2e7";
+      escape = "eba0ac";
+      autosuggestion = "6c7086";
+      cancel = "f38ba8";
+      cwd = "f9e2af";
+      user = "94e2d5";
+      host = "89b4fa";
+      remote = "a6e3a1";
+      status = "f38ba8";
+      progress = "6c7086";
+      prefix = "f5c2e7";
+      completion = "cdd6f4";
+      description = "6c7086";
+    };
     foot = {
       background = "1e1e2e";
       foreground = "cdd6f4";
