@@ -309,6 +309,7 @@ in
       enable = true;
       target = "niri/config.kdl";
       text = ''
+        screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
         prefer-no-csd
         window-rule {
             geometry-corner-radius 12
