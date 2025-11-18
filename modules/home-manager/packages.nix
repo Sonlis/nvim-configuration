@@ -40,6 +40,10 @@
       luarocks
       terraform
 
+      # Dev python
+      ty
+      poetry
+
       discord
       nautilus
       qimgv
@@ -49,13 +53,8 @@
           ansible-core
           openstacksdk
           pytz
-          python-lsp-server
-          python-lsp-ruff
-          pylint
-          pyls-isort
-          isort
-          black
           ruff
+          uv
 
           ## Required for some ansible roles in personal-environment
           botocore

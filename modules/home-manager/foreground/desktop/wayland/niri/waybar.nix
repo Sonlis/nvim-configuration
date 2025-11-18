@@ -40,12 +40,24 @@
             "niri/workspaces"
           ];
           modules-right = [
+            "backlight"
             "wireplumber"
             "wireplumber#source"
             "network"
             "bluetooth"
             "battery"
           ];
+          backlight = {
+            format = "{icon} {percent}%";
+            format-icons = [
+              "○"
+              "◔"
+              "◑"
+              "◕"
+              "●"
+            ];
+          };
+
           battery = {
             interval = 60;
             states = {
@@ -53,12 +65,13 @@
               critical = 15;
             };
             format = "{icon} {capacity}%";
+            format-charging = "{icon} 󰂄 {capacity}%";
             format-icons = [
-              ""
-              ""
-              ""
-              ""
-              ""
+              "󰁺"
+              "󰁼"
+              "󰁾"
+              "󰂀"
+              "󰁹"
             ];
             max-length = 25;
           };
@@ -74,7 +87,7 @@
           network = {
             format = "{ifname}";
             format-wifi = "  {essid}";
-            format-ethernet = "󰊗 {ipaddr}/{cidr}";
+            format-ethernet = "󰈀 {ipaddr}/{cidr}";
             format-disconnected = "󰖪";
             tooltip = false;
             max-length = 50;
@@ -142,7 +155,8 @@
         #battery,
         #network,
         #wireplumber,
-        #workspaces {
+        #workspaces,
+        #backlight {
             background: #242438;
             border-radius: 5px;
             padding: 0px 10px;
@@ -172,6 +186,10 @@
         }
 
         #wireplumber {
+            color: #fab387;
+        }
+
+        #wireplumber.source {
             color: #eba0ac;
         }
 
@@ -182,7 +200,8 @@
         #network,
         #bluetooth,
         #battery,
-        #wireplumber {
+        #wireplumber,
+        #backlight {
             margin-right: 8px;
         }
 
@@ -192,6 +211,10 @@
 
         #battery {
             color: #f9e2af;
+        }
+
+        #backlight {
+            color: #a6e3a1;
         }
 
       '';
