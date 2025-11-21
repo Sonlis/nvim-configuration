@@ -41,6 +41,7 @@
       terraform
 
       # Dev python
+      ruff
       ty
       poetry
 
@@ -48,19 +49,6 @@
       nautilus
       qimgv
       netbird
-      (python3.withPackages (
-        ps: with ps; [
-          ansible-core
-          openstacksdk
-          pytz
-          ruff
-          uv
-
-          ## Required for some ansible roles in personal-environment
-          botocore
-          boto3
-        ]
-      ))
     ];
 
     # Programs natively supported by home-manager.
