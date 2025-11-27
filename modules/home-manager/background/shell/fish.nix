@@ -19,10 +19,6 @@ in
           ''
             exec uswm start hyprland-uwsm.desktop
           ''
-        else if config.desktop == "niri" then
-          ''
-            niri-session -l
-          ''
         else
           "";
       shellInit = ''
