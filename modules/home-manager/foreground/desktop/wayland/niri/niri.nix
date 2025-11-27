@@ -295,6 +295,35 @@ let
         hide-after-inactive-ms 10000
     }
   '';
+  window-rules = ''
+    window-rule {
+      match app-id="org.pulseaudio.pavucontrol"
+      open-floating true 
+      open-focused true
+      default-floating-position x=32 y=32 relative-to="top-right"
+    }
+
+    window-rule {
+      match app-id="nmtui"
+      open-floating true 
+      open-focused true
+      default-floating-position x=32 y=32 relative-to="top-right"
+    }
+
+    window-rule {
+      match app-id="bluetui"
+      open-floating true 
+      open-focused true
+      default-floating-position x=32 y=32 relative-to="top-right"
+    }
+
+    window-rule {
+      match app-id="fum"
+      open-floating true 
+      open-focused true
+      default-floating-position x=32 y=32 relative-to="top-left"
+    }
+  '';
 in
 {
   options.niri = {
@@ -321,6 +350,7 @@ in
         ${binds}
         ${spawn-at-startup}
         ${cursor}
+        ${window-rules}
       '';
     };
   };

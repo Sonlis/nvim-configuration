@@ -33,11 +33,11 @@
           margin-right = 5;
           margin-top = 5;
           modules-center = [
-            "mpris"
             "clock"
           ];
           modules-left = [
             "niri/workspaces"
+            "mpris"
           ];
           modules-right = [
             "backlight"
@@ -77,6 +77,7 @@
           };
           bluetooth = {
             format = " {status}";
+            on-click = "foot --override=colors.alpha=1 --app-id bluetui bluetui";
             format-connected = " {device_alias}";
             format-connected-battery = " {device_alias} {device_battery_percentage}%";
             tooltip-format = "{controller_alias}\t{controller_address}\n\n{num_connections} connected";
@@ -91,11 +92,12 @@
             format-disconnected = "󰖪";
             tooltip = false;
             max-length = 50;
+            on-click = "foot --app-id nmtui --config ~/.config/nmtui/footColors.ini nmtui";
           };
           wireplumber = {
             format = "{icon} {volume}%";
             format-muted = "󰝟 {volume}%";
-            on-click = "helvum";
+            on-click = "pavucontrol";
             format-icons = [
               ""
               ""
@@ -114,6 +116,7 @@
             format = "{player_icon} {title} - <i>{artist}</i>";
             format-paused = "{status_icon} {title} - <i>{artist}</i>";
             format-stopped = "Media";
+            on-click = "foot --app-id fum fum";
             player-icons = {
               default = "▶";
               mpv = "🎵";

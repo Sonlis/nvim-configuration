@@ -8,7 +8,8 @@
       if config.desktop == "niri" then
         with pkgs;
         [
-          helvum
+          bluetui
+          fum
           playerctl
           swaybg
           swayidle
