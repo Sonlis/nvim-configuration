@@ -11,9 +11,7 @@
           bluetui
           fum
           playerctl
-          swaybg
           swayidle
-          swaylock-effects
           xdg-desktop-portal-gtk
           xwayland-satellite
         ]

@@ -1,9 +1,11 @@
 { pkgs, ... }:
 {
   environment.systemPackages = with pkgs; [
+    acl
     file
     foot
     git
+    lazygit
     lsof
     dnsutils
     netbird

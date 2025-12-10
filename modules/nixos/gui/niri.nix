@@ -1,22 +1,24 @@
 {
-  lib,
   config,
-  pkgs,
+  inputs,
+  lib,
   ...
 }:
 {
+  imports = [
+    inputs.dankMaterialShell.nixosModules.greeter
+  ];
   config = lib.mkIf (config.desktop == "niri") {
     programs.niri = {
       enable = true;
     };
-    services.greetd = {
+
+    programs.dankMaterialShell.greeter = {
       enable = true;
-      settings = {
-        default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd niri-session --theme 'border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red'";
-          user = "greeter";
-        };
+      compositor = {
+        name = "niri";
       };
+      configHome = "/home/${config.username}";
     };
   };
 }

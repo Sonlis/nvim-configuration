@@ -9,9 +9,10 @@ let
         Mod+Shift+Slash { show-hotkey-overlay; }
 
         Mod+T hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}"; }
+        Mod+M hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}" "nvim" "--cmd" "term"; }
         Mod+E hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
         Mod+P hotkey-overlay-title="Run an Application: walker" { spawn "walker" "-m" "clipboard"; }
-        Mod+Shift+O hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock" "--clock" "--indicator"; }
+        Mod+Shift+O hotkey-overlay-title="Lock the Screen: dms" { spawn "dms" "ipc" "call" "lock" "lock"; }
 
         // The allow-when-locked=true property makes them work even when the session is locked.
         // Using spawn-sh allows to pass multiple arguments together with the command.
@@ -286,7 +287,9 @@ let
         gaps 10
     }
   '';
-  spawn-at-startup = '''';
+  spawn-at-startup = ''
+    spawn-at-startup "dms" "run"
+  '';
   cursor = ''
         cursor {
         xcursor-theme "breeze_cursors"
@@ -338,6 +341,7 @@ in
       enable = true;
       target = "niri/config.kdl";
       text = ''
+
         screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
         prefer-no-csd
         window-rule {

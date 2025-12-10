@@ -24,6 +24,7 @@
 
       # Tools
       k9s
+      tmux
       networkmanagerapplet
       openstackclient
       pavucontrol
@@ -43,6 +44,7 @@
       # Dev python
       ruff
       ty
+      uv
       poetry
 
       discord

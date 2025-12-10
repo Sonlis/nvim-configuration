@@ -26,7 +26,17 @@
     };
 
     infomanixak = {
-      url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
+      url = "path:/home/workibast/infomaniak/pink/infoma-nix-ak";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -44,6 +54,7 @@
     inputs@{
       self,
       catppuccin,
+      dankMaterialShell,
       nixpkgs,
       home-manager,
       hyprland,
@@ -77,6 +88,7 @@
       homeConfigurations = import ./homes {
         inherit
           home-manager
+          dankMaterialShell
           inputs
           lib
           nixpkgs
