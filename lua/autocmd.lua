@@ -14,7 +14,7 @@ autocmd({ "VimEnter" }, {
     group = editor_startup,
     callback = function()
         local entrypoint = vim.fn.expand('<afile>')
-        if vim.fn.isdirectory(entrypoint) == 1 or vim.fn.expand(entrypoint) == "" then
+        if vim.fn.isdirectory(entrypoint) == 1 or vim.fn.expand(entrypoint) == "" and vim.v.argv[1] ~= "--cmd" then
             vim.cmd('Neotree reveal_force_cwd toggle left')
         end
     end,
@@ -80,9 +80,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.api.nvim_create_autocmd('LspAttach', {
     callback = function(ev)
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
-        if client:supports_method('textDocument/completion') then
-            vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
-        end
     end,
 })
 
@@ -164,4 +161,11 @@ vim.api.nvim_create_autocmd("CursorMovedI", {
     callback = function()
         vim.lsp.buf.clear_references()
     end,
+})
+
+vim.api.nvim_create_autocmd({ 'BufWinEnter', 'WinEnter' }, {
+    callback = function()
+        if vim.bo.buftype == 'terminal' then vim.cmd('startinsert') end
+    end,
+    group = vim.api.nvim_create_augroup('vim_term', { clear = true })
 })
