@@ -24,6 +24,7 @@
           bash-language-server
           gopls
           lua-language-server
+          yaml-language-server
           nil
           nixfmt-rfc-style
         ]

@@ -49,7 +49,7 @@
 
       discord
       nautilus
-      qimgv
+      qimgv # Image viewer
       netbird
     ];
 

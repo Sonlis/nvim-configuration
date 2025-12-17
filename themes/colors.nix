@@ -70,7 +70,7 @@
       description = "6c7086";
     };
     foot = {
-      background = "1e1e2e";
+      background = "11111b";
       foreground = "cdd6f4";
 
       regular0 = "45475a";
@@ -92,8 +92,8 @@
       bright7 = "a6adc8";
       alpha = "0.9";
     };
-    wallpaper = "${../assets/wallpapers/hollow-knight.jpg}";
-    wallpaperWide = "${../assets/wallpapers/hollow-knight.jpg}";
+    wallpaper = "${../assets/wallpapers/jellyfish.jpg}";
+    wallpaperWide = "${../assets/wallpapers/jellyfish.jpg}";
     hyprpanel = "catppuccin_mocha.json";
     hyprland = {
       active_border = "rgba(ff31748f)";

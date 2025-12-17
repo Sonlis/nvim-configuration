@@ -9,7 +9,6 @@
         with pkgs;
         [
           bluetui
-          fum
           playerctl
           swayidle
           xdg-desktop-portal-gtk
