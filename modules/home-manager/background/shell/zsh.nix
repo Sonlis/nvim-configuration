@@ -23,11 +23,6 @@ in
         ${builtins.concatStringsSep "\n" formatted_exports}
         eval "$(starship init zsh)"
       '';
-      profileExtra = ''
-        if uwsm check may-start; then
-            exec uswm start hyprland-uwsm.desktop
-        fi
-      '';
     };
     programs.atuin = {
       enable = true;

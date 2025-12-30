@@ -26,17 +26,6 @@
     };
     wallpaper = "${../assets/wallpapers/looking-far-away.jpg}";
     wallpaperWide = "${../assets/wallpapers/looking-far-away-3840-2160.jpg}";
-    hyprpanel = "rose_pine.json";
-    hyprland = {
-      active_border = "rgb(f38ba8)";
-      inactive_border = "rgb(1f1d2e)";
-    };
-    hyprlock = {
-      outer_colors = "rgba(0031748f) rgba(ff31748f)";
-      check_colors = "rgba(00f6c177) rgba(fff6c177)";
-      fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
-      background_path = "${../assets/wallpapers/min-windows.jpg}";
-    };
   };
 
   catppuccin_mocha = {
@@ -94,17 +83,6 @@
     };
     wallpaper = "${../assets/wallpapers/jellyfish.jpg}";
     wallpaperWide = "${../assets/wallpapers/jellyfish.jpg}";
-    hyprpanel = "catppuccin_mocha.json";
-    hyprland = {
-      active_border = "rgba(ff31748f)";
-      inactive_border = "rgb(1f1d2e)";
-    };
-    hyprlock = {
-      outer_colors = "rgba(0031748f) rgba(ff31748f)";
-      check_colors = "rgba(00f6c177) rgba(fff6c177)";
-      fail_colors = "rgba(ffeb6f92) rgba(ffeb6f92)";
-      background_path = "${../assets/wallpapers/windows-black.png}";
-    };
   };
 
   tokyo-night = {
@@ -128,11 +106,6 @@
       bright6 = "7dcfff";
       bright7 = "c0caf5";
       alpha = "1";
-    };
-    hyprpanel = "tokyo_night_split.json";
-    hyprland = {
-      active_border = "rgb(e0af68)";
-      inactive_border = "rgb(bb9af7)";
     };
     wallpaper = "${../assets/wallpapers/nix-snowflake.png}";
   };
@@ -161,10 +134,5 @@
       alpha = "0.9";
     };
     wallpaper = "${../assets/wallpapers/rosepine-portal-cake.png}";
-    hyprpanel = "rose_pine_vivid.json";
-    hyprland = {
-      active_border = "rgb(eb6f92)";
-      inactive_border = "rgb(9ccfd8)";
-    };
   };
 }

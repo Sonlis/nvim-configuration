@@ -14,13 +14,7 @@ in
         os = "openstack";
         k = "kubectl";
       };
-      loginShellInit =
-        if config.desktop == "hyprland" then
-          ''
-            exec uswm start hyprland-uwsm.desktop
-          ''
-        else
-          "";
+      loginShellInit = "";
       shellInit = ''
         ${builtins.concatStringsSep "\n" formatted_exports}
       '';

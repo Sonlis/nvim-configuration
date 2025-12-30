@@ -9,10 +9,9 @@
   imports = [
     inputs.walker.homeManagerModules.default
     ./niri
-    ./hyprland
   ];
 
-  config = lib.mkIf (config.desktop == "niri" || config.desktop == "hyprland") {
+  config = lib.mkIf (config.desktop == "niri") {
     programs.walker = {
       enable = true;
       runAsService = true;
