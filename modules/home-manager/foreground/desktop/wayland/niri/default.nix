@@ -1,5 +1,4 @@
 {
-  inputs,
   ...
 }:
 let
@@ -9,7 +8,6 @@ let
 in
 {
   imports = [
-    inputs.niri.homeModules.niri
   ]
   ++ files;
 }

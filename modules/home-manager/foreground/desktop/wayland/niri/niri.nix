@@ -327,15 +327,9 @@ let
       default-floating-position x=32 y=32 relative-to="top-left"
     }
   '';
+
 in
 {
-  options.niri = {
-    monitors = lib.mkOption {
-      type = lib.types.str;
-      description = "Monitors config";
-      default = "";
-    };
-  };
   config = lib.mkIf (config.desktop == "niri") {
     xdg.configFile.niriconfig = {
       enable = true;
@@ -348,13 +342,16 @@ in
             geometry-corner-radius 12
             clip-to-geometry true
         }
-        ${config.niri.monitors}
+        hotkey-overlay {
+            skip-at-startup
+        }
         ${layout}
         ${input}
         ${binds}
         ${spawn-at-startup}
         ${cursor}
         ${window-rules}
+        include "dms/outputs.kdl"
       '';
     };
   };
