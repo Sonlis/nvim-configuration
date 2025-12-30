@@ -352,6 +352,7 @@ in
         ${cursor}
         ${window-rules}
         include "dms/outputs.kdl"
+        include "dms/colors.kdl"
       '';
     };
   };
