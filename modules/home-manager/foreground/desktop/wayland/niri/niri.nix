@@ -9,30 +9,14 @@ let
         Mod+Shift+Slash { show-hotkey-overlay; }
 
         Mod+T hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}"; }
-        Mod+M hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}" "nvim" "--cmd" "term"; }
+
+        // Consume one window from the right to the bottom of the focused column.
+        Mod+Period  { consume-window-into-column; }
+
+        // Expel the bottom window from the focused column to the right.
+        Mod+Slash { expel-window-from-column; }
+
         Mod+E hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
-        Mod+P hotkey-overlay-title="Run an Application: walker" { spawn "walker" "-m" "clipboard"; }
-        Mod+Shift+O hotkey-overlay-title="Lock the Screen: dms" { spawn "dms" "ipc" "call" "lock" "lock"; }
-
-        // The allow-when-locked=true property makes them work even when the session is locked.
-        // Using spawn-sh allows to pass multiple arguments together with the command.
-        XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-        XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-        XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-        XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-
-        // Example media keys mapping using playerctl.
-        // This will work with any MPRIS-enabled media player.
-        XF86AudioPlay        allow-when-locked=true { spawn-sh "playerctl play-pause"; }
-        XF86AudioStop        allow-when-locked=true { spawn-sh "playerctl stop"; }
-        XF86AudioPrev        allow-when-locked=true { spawn-sh "playerctl previous"; }
-        XF86AudioNext        allow-when-locked=true { spawn-sh "playerctl next"; }
-
-        // Example brightness key mappings for brightnessctl.
-        // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
-        // but you need to manually put each argument in separate "" quotes.
-        XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-        XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
 
         // Open/close the Overview: a zoomed-out view of workspaces and windows.
         // You can also move the mouse into the top-left hot corner,
@@ -186,11 +170,6 @@ let
         Mod+BracketLeft  { consume-or-expel-window-left; }
         Mod+BracketRight { consume-or-expel-window-right; }
 
-        // Consume one window from the right to the bottom of the focused column.
-        Mod+Comma  { consume-window-into-column; }
-        // Expel the bottom window from the focused column to the right.
-        Mod+Period { expel-window-from-column; }
-
         Mod+R { switch-preset-column-width; }
         // Cycling through the presets in reverse order is also possible.
         // Mod+R { switch-preset-column-width-back; }
@@ -278,15 +257,6 @@ let
          focus-follows-mouse
     } 
   '';
-  layout = ''
-    layout {
-        focus-ring {
-            width 2
-            active-color "#7fc8ff"
-        } 
-        gaps 10
-    }
-  '';
   spawn-at-startup = ''
     spawn-at-startup "dms" "run"
   '';
@@ -298,36 +268,6 @@ let
         hide-after-inactive-ms 10000
     }
   '';
-  window-rules = ''
-    window-rule {
-      match app-id="org.pulseaudio.pavucontrol"
-      open-floating true 
-      open-focused true
-      default-floating-position x=32 y=32 relative-to="top-right"
-    }
-
-    window-rule {
-      match app-id="nmtui"
-      open-floating true 
-      open-focused true
-      default-floating-position x=32 y=32 relative-to="top-right"
-    }
-
-    window-rule {
-      match app-id="bluetui"
-      open-floating true 
-      open-focused true
-      default-floating-position x=32 y=32 relative-to="top-right"
-    }
-
-    window-rule {
-      match app-id="fum"
-      open-floating true 
-      open-focused true
-      default-floating-position x=32 y=32 relative-to="top-left"
-    }
-  '';
-
 in
 {
   config = lib.mkIf (config.desktop == "niri") {
@@ -338,21 +278,17 @@ in
 
         screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
         prefer-no-csd
-        window-rule {
-            geometry-corner-radius 12
-            clip-to-geometry true
-        }
         hotkey-overlay {
             skip-at-startup
         }
-        ${layout}
         ${input}
         ${binds}
         ${spawn-at-startup}
         ${cursor}
-        ${window-rules}
         include "dms/outputs.kdl"
         include "dms/colors.kdl"
+        include "dms/binds.kdl"
+        include "dms/layout.kdl"
       '';
     };
   };

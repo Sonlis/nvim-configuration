@@ -12,15 +12,14 @@
       "nix-command"
       "flakes"
     ];
-    substituters = [
-      "https://walker.cachix.org"
-    ];
-    trusted-substituters = [
-      "https://walker.cachix.org"
-    ];
-    trusted-public-keys = [
-    ];
   };
   environment.localBinInPath = true;
   programs.nix-ld.enable = true;
+
+  # Fix uv python ssl.SSLCertVerificationError
+  # Source: https://discourse.nixos.org/t/fix-ssl-sslcertverificationerror-with-uvs-standalone-python/71138
+  environment.etc.certfile = {
+    source = "/etc/ssl/certs/ca-bundle.crt";
+    target = "ssl/cert.pem";
+  };
 }
