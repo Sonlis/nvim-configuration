@@ -301,7 +301,7 @@ in
         dockBorderThickness = 1;
         dockIsolateDisplays = false;
         notificationOverlayEnabled = false;
-        modalDarkenBackground = true;
+        modalDarkenBackground = false;
         lockScreenShowPowerActions = true;
         lockScreenShowSystemIcons = true;
         lockScreenShowTime = true;
@@ -405,7 +405,7 @@ in
             borderThickness = 1;
             widgetOutlineEnabled = true;
             widgetOutlineColor = "primary";
-            widgetOutlineOpacity = 1;
+            widgetOutlineOpacity = 0.5;
             widgetOutlineThickness = 1;
             fontScale = 1;
             autoHide = false;
@@ -514,18 +514,18 @@ in
       session = {
         isLightMode = false;
         doNotDisturb = false;
-        wallpaperPath = colors.wallpaper;
+        wallpaperPath = "/home/${config.user}/Pictures/wallpapers/jellyfish.jpg";
         perMonitorWallpaper = false;
         monitorWallpapers = {
         };
         perModeWallpaper = false;
-        wallpaperPathLight = colors.wallpaper;
-        wallpaperPathDark = colors.wallpaper;
+        wallpaperPathLight = "/home/${config.user}/Pictures/wallpapers/jellyfish.jpg";
+        wallpaperPathDark = "/home/${config.user}/Pictures/wallpapers/jellyfish.jpg";
         monitorWallpapersLight = {
         };
         monitorWallpapersDark = {
         };
-        wallpaperTransition = "fade";
+        wallpaperTransition = "portal";
         includedTransitions = [
           "fade"
           "wipe"
@@ -535,9 +535,9 @@ in
           "pixelate"
           "portal"
         ];
-        wallpaperCyclingEnabled = false;
+        wallpaperCyclingEnabled = true;
         wallpaperCyclingMode = "interval";
-        wallpaperCyclingInterval = 300;
+        wallpaperCyclingInterval = 900;
         wallpaperCyclingTime = "06:00";
         monitorCyclingSettings = {
         };

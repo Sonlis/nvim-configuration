@@ -51,6 +51,7 @@
       nautilus
       qimgv # Image viewer
       netbird
+      ytmdesktop
     ];
 
     # Programs natively supported by home-manager.

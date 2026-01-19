@@ -124,8 +124,8 @@
         "tool3box": "tool3box"
       },
       "locked": {
-        "lastModified": 1768229216,
-        "narHash": "sha256-ZdmScdlZT01ekwop9TjyG33vE1UJ4/+vkR7WBVAqWpw=",
+        "lastModified": 1768737063,
+        "narHash": "sha256-SzZ7FviB+dp02Gb2Nh6DEAFcgizKuVNhNvnIkXGgEbM=",
         "path": "/home/workibast/infomaniak/pink/infoma-nix-ak",
         "type": "path"
       },
