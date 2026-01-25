@@ -9,7 +9,6 @@ in
     ./background
     ./theme
 
-    ./gc.nix
     ./packages.nix
     #./secrets.nix
   ];
