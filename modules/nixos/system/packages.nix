@@ -15,6 +15,10 @@
     wireguard-tools
   ];
   services = {
-    udev.packages = [ pkgs.yubikey-personalization ];
+    udev = {
+      packages = with pkgs; [
+        yubikey-personalization
+      ];
+    };
   };
 }

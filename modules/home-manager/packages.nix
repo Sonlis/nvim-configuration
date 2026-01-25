@@ -36,17 +36,17 @@
       awscli2
       go
       llvmPackages_21.libcxxClang
-      poetry
       lua
       luarocks
       terraform
+      nodejs_24
 
       # Dev python
       ruff
       ty
       uv
-      poetry
 
+      signal-desktop
       discord
       nautilus
       qimgv # Image viewer

@@ -27,6 +27,10 @@
           yaml-language-server
           nil
           nixfmt-rfc-style
+          typescript-language-server
+          vscode-json-languageserver
+          vue-language-server
+          vtsls
         ]
       else
         [ ]

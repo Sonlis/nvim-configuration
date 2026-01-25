@@ -227,7 +227,7 @@ in
         notepadShowLineNumbers = false;
         notepadTransparencyOverride = -1;
         notepadLastCustomTransparency = 0.7;
-        soundsEnabled = true;
+        soundsEnabled = false;
         useSystemSoundTheme = false;
         soundNewNotification = true;
         soundVolumeChanged = true;
