@@ -6,7 +6,7 @@
 }:
 {
   imports = [
-    inputs.dankMaterialShell.nixosModules.greeter
+    inputs.dms.nixosModules.greeter
   ];
   config = lib.mkIf (config.desktop == "niri") {
     programs.niri = {

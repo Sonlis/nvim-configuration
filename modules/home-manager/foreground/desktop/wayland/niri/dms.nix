@@ -9,7 +9,7 @@ let
 in
 {
   imports = [
-    inputs.dankMaterialShell.homeModules.dank-material-shell
+    inputs.dms.homeModules.dank-material-shell
   ];
   config = lib.mkIf (config.desktop == "niri") {
     programs.dank-material-shell = {

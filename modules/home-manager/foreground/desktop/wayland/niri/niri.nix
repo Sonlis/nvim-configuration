@@ -9,6 +9,9 @@ let
         Mod+Shift+Slash { show-hotkey-overlay; }
 
         Mod+T hotkey-overlay-title="Open a Terminal" { spawn "${config.terminal.main}"; }
+        Mod+Space hotkey-overlay-title="Toggle Application Launcher" { spawn "dms" "ipc" "spotlight" "toggle" ;}
+        Mod+Alt+L hotkey-overlay-title="Toggle Lock Screen" { spawn "dms" "ipc" "lock" "lock"; }
+        Mod+P hotkey-overlay-title="Toggle Clipboard Manager" { spawn "dms" "ipc" "clipboard" "toggle"; }
 
         // Consume one window from the right to the bottom of the focused column.
         Mod+Period  { consume-window-into-column; }
@@ -275,7 +278,6 @@ in
       enable = true;
       target = "niri/config.kdl";
       text = ''
-
         screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
         prefer-no-csd
         hotkey-overlay {
@@ -287,7 +289,6 @@ in
         ${cursor}
         include "dms/outputs.kdl"
         include "dms/colors.kdl"
-        include "dms/binds.kdl"
         include "dms/layout.kdl"
       '';
     };

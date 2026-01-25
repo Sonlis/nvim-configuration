@@ -14,12 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    infomanixak = {
-      url = "path:/home/workibast/infomaniak/pink/infoma-nix-ak";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    dankMaterialShell = {
+    dms = {
       url = "github:AvengeMedia/DankMaterialShell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -38,7 +33,7 @@
     inputs@{
       self,
       catppuccin,
-      dankMaterialShell,
+      dms,
       nixpkgs,
       home-manager,
       walker,
@@ -71,7 +66,7 @@
       homeConfigurations = import ./homes {
         inherit
           home-manager
-          dankMaterialShell
+          dms
           inputs
           lib
           nixpkgs
