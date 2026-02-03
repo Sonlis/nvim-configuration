@@ -290,6 +290,7 @@ in
         include "dms/outputs.kdl"
         include "dms/colors.kdl"
         include "dms/layout.kdl"
+        include "dms/binds.kdl"
       '';
     };
   };
