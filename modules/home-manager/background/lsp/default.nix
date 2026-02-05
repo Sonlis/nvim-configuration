@@ -26,7 +26,7 @@
           lua-language-server
           yaml-language-server
           nil
-          nixfmt-rfc-style
+          nixfmt
           typescript-language-server
           vscode-json-languageserver
           vue-language-server

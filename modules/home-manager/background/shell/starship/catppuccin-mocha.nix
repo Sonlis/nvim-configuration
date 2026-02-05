@@ -12,14 +12,14 @@
           style = "lavender";
         };
         git_branch = {
-          format = "(fg:mauve)[ $symbol $branch ]($style)(fg:yellow) ";
+          format = "(fg:mauve)[ $symbol $branch ]($style)(fg:peach) ";
           style = "mauve";
           symbol = "";
         };
         git_status = {
           disabled = false;
-          style = "fg:yellow";
-          format = "[[($all_status$ahead_behind )](fg:yellow)]($style)";
+          style = "fg:peach";
+          format = "[[($all_status$ahead_behind )](fg:peach)]($style)";
         };
       };
     };

@@ -11,6 +11,7 @@ in
 {
   imports = [
     ./foot.nix
+    ./tmux.nix
   ];
 
   options.terminal = {

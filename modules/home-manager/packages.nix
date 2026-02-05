@@ -24,7 +24,6 @@
 
       # Tools
       k9s
-      tmux
       networkmanagerapplet
       openstackclient
       pavucontrol
