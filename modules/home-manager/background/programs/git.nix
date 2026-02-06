@@ -23,17 +23,15 @@
         key = config.git.signingKey;
         signByDefault = true;
       };
-      extraConfig = {
-        safe.directory = [ "/etc/nixos" ];
-        pull.rebase = true;
-        gpg = {
-          format = "ssh";
-        };
-      };
       settings = {
         user = {
           name = "${config.git.userName}";
           email = "${config.git.email}";
+        };
+        safe.directory = [ "/etc/nixos" ];
+        pull.rebase = true;
+        gpg = {
+          format = "ssh";
         };
       };
     };
