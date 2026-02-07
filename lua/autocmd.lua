@@ -7,19 +7,6 @@ local editor_startup = augroup('EditorStartup', {})
 
 local on_save = augroup('OnSave', {})
 
--- Neat little trick to open neotree on startup:
--- If we open giving a directory or no arguments, opens neotree in a way that it remains on the left
--- If a file is given as argument, do not open neotree
-autocmd({ "VimEnter" }, {
-    group = editor_startup,
-    callback = function()
-        local entrypoint = vim.fn.expand('<afile>')
-        if vim.fn.isdirectory(entrypoint) == 1 or vim.fn.expand(entrypoint) == "" and vim.v.argv[1] ~= "--cmd" then
-            vim.cmd('Neotree reveal_force_cwd toggle left')
-        end
-    end,
-})
-
 autocmd('TextYankPost', {
     group = yank_group,
     pattern = '*',
