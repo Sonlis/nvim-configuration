@@ -4,9 +4,6 @@
   lib,
   ...
 }:
-let
-  colors = config.colors;
-in
 {
   imports = [
     inputs.dms.homeModules.dank-material-shell

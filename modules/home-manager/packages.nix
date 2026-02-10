@@ -24,6 +24,9 @@
 
       # Tools
       k9s
+      fd # find alternative, mostly used by neovim-telescope
+      gonzo # Log analysis
+      xh # Friendly curl
       networkmanagerapplet
       openstackclient
       pavucontrol
