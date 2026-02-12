@@ -42,6 +42,7 @@
       luarocks
       terraform
       nodejs_24
+      yarn
 
       # Dev python
       ruff
