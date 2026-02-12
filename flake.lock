@@ -59,42 +59,6 @@
         "type": "github"
       }
     },
-    "flake-parts": {
-      "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib"
-      },
-      "locked": {
-        "lastModified": 1768135262,
-        "narHash": "sha256-PVvu7OqHBGWN16zSi6tEmPwwHQ4rLPU9Plvs8/1TUBY=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "80daad04eddbbf5a4d883996a73f3f542fa437ac",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
-    "flake-parts_2": {
-      "inputs": {
-        "nixpkgs-lib": "nixpkgs-lib_2"
-      },
-      "locked": {
-        "lastModified": 1760948891,
-        "narHash": "sha256-TmWcdiUUaWk8J4lpjzu4gCGxWY6/Ok7mOK4fIFfBuU4=",
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "rev": "864599284fc7c0ba6357ed89ed5e2cd5040f0c04",
-        "type": "github"
-      },
-      "original": {
-        "owner": "hercules-ci",
-        "repo": "flake-parts",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -115,25 +79,6 @@
         "type": "github"
       }
     },
-    "infomanixak": {
-      "inputs": {
-        "flake-parts": "flake-parts",
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "tool3box": "tool3box"
-      },
-      "locked": {
-        "lastModified": 1769765711,
-        "narHash": "sha256-i/Jc/DuM4ggj4Va99rjS0v/YeSm4ojSHyfcdDg8LE3c=",
-        "path": "/home/workibast/infomaniak/pink/infoma-nix-ak",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/workibast/infomaniak/pink/infoma-nix-ak",
-        "type": "path"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1770197578,
@@ -147,36 +92,6 @@
         "owner": "NixOS",
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-lib": {
-      "locked": {
-        "lastModified": 1765674936,
-        "narHash": "sha256-k00uTP4JNfmejrCLJOwdObYC9jHRrr/5M/a/8L2EIdo=",
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "rev": "2075416fcb47225d9b68ac469a5c4801a9c4dd85",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "type": "github"
-      }
-    },
-    "nixpkgs-lib_2": {
-      "locked": {
-        "lastModified": 1754788789,
-        "narHash": "sha256-x2rJ+Ovzq0sCMpgfgGaaqgBSwY+LST+WbZ6TytnT9Rk=",
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
-        "rev": "a73b9c743612e4244d865a2fdee11865283c04e6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "nixpkgs.lib",
         "type": "github"
       }
     },
@@ -256,7 +171,6 @@
         "dms": "dms",
         "elephant": "elephant",
         "home-manager": "home-manager",
-        "infomanixak": "infomanixak",
         "nixpkgs": "nixpkgs_3",
         "sops-nix": "sops-nix",
         "walker": "walker"
@@ -310,25 +224,6 @@
         "owner": "nix-systems",
         "repo": "default-linux",
         "type": "github"
-      }
-    },
-    "tool3box": {
-      "inputs": {
-        "flake-parts": "flake-parts_2",
-        "nixpkgs": [
-          "infomanixak",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1769765479,
-        "narHash": "sha256-/uJ0PQSfX1OTSwOl4UCCS6OJ0f9JOt5wpfsH2lgCgMU=",
-        "path": "/home/workibast/infomaniak/pink/tool3box",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/workibast/infomaniak/pink/tool3box",
-        "type": "path"
       }
     },
     "walker": {

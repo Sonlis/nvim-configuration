@@ -30,6 +30,7 @@
       networkmanagerapplet
       openstackclient
       pavucontrol
+      prek
       thunderbird
       wl-clipboard
       yubikey-personalization

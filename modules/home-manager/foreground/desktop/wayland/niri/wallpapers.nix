@@ -1,8 +1,12 @@
 { self, ... }:
 {
-  home.file."Pictures/wallpapers" = {
-    source = "${self}/assets/wallpapers";
+  home.file."Pictures/dark-wallpapers" = {
+    source = "${self}/assets/dark-wallpapers";
     recursive = true;
-    target = "Pictures/wallpapers";
+  };
+
+  home.file."Pictures/light-wallpapers" = {
+    source = "${self}/assets/light-wallpapers";
+    recursive = true;
   };
 }

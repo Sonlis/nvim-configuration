@@ -447,7 +447,6 @@
             innerPadding = 4;
             leftWidgets = [
               "workspaceSwitcher"
-              "focusedWindow"
             ];
             maximizeDetection = true;
             name = "Main Bar";

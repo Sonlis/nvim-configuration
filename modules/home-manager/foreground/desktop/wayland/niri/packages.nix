@@ -2,7 +2,6 @@
 {
   config = {
     home.packages = [
-
     ]
     ++ (
       if config.desktop == "niri" then
@@ -10,7 +9,6 @@
         [
           bluetui
           playerctl
-          swayidle
           xdg-desktop-portal-gtk
           xwayland-satellite
         ]
