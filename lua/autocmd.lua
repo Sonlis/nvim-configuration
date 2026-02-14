@@ -3,8 +3,6 @@ local autocmd = vim.api.nvim_create_autocmd
 
 local yank_group = augroup('HighlightYank', {})
 
-local editor_startup = augroup('EditorStartup', {})
-
 local on_save = augroup('OnSave', {})
 
 autocmd('TextYankPost', {
@@ -148,11 +146,4 @@ vim.api.nvim_create_autocmd("CursorMovedI", {
     callback = function()
         vim.lsp.buf.clear_references()
     end,
-})
-
-vim.api.nvim_create_autocmd({ 'BufWinEnter', 'WinEnter' }, {
-    callback = function()
-        if vim.bo.buftype == 'terminal' then vim.cmd('startinsert') end
-    end,
-    group = vim.api.nvim_create_augroup('vim_term', { clear = true })
 })

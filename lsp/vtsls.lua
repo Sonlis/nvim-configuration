@@ -2,7 +2,7 @@ local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typ
 local vue_plugin = {
     name = '@vue/typescript-plugin',
     location =
-    "/nix/store/drlczrrfcgprgrrbb3hiav97slbb9mhl-vue-language-server-3.2.2/lib/language-tools/packages/language-server",
+    "/nix/store/sar9l3ikfpx7mzzwpqgdhvaa6ai14lk2-vue-language-server-3.2.2/lib/language-tools/packages/language-server",
     languages = { 'vue' },
     configNamespace = 'typescript',
 }
