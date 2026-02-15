@@ -10,6 +10,8 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 vim.keymap.set("n", "<leader>o", "<CMD>Oil<CR>")
+vim.keymap.set("n", "<leader>v", "<CMD>vnew<CR><CMD>Oil<CR>")
+vim.keymap.set("n", "<leader>n", "<CMD>new<CR><CMD>Oil<CR>")
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
