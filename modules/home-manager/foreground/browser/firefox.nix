@@ -6,6 +6,43 @@
     languagePacks = [ "en" ];
     profiles.default = {
       name = "Bastibast";
+      search = {
+        default = "google";
+        engines = {
+          "youtube" = {
+            iconUpdateURL = "https://youtube.com/favicon.ico";
+            updateInterval = 24 * 60 * 60 * 1000;
+            definedAliases = [ "@yt" ];
+            urls = [
+              {
+                template = "https://www.youtube.com/results";
+                params = [
+                  {
+                    name = "search_query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+          };
+          "github" = {
+            iconUpdateURL = "https://github.com/favicon.ico";
+            updateInterval = 24 * 60 * 60 * 1000;
+            definedAliases = [ "@gh" ];
+            urls = [
+              {
+                template = "https://github.com/search";
+                params = [
+                  {
+                    name = "q";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+          };
+        };
+      };
     };
     policies = {
       DisableTelemetry = true;
