@@ -7,7 +7,8 @@
     profiles.default = {
       name = "Bastibast";
       search = {
-        default = "google";
+        default = "DuckDuckGo";
+        privateDefault = "DuckDuckGo";
         engines = {
           "youtube" = {
             iconUpdateURL = "https://youtube.com/favicon.ico";
