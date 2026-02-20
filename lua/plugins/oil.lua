@@ -4,6 +4,9 @@ return {
     ---@type oil.SetupOpts
     opts = {
         default_file_explorer = true,
+        win_options = {
+            signcolumn = "yes:2"
+        },
     },
     -- Optional dependencies
     dependencies = { { "nvim-mini/mini.icons", opts = {} } },
