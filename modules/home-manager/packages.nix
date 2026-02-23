@@ -24,6 +24,7 @@
 
       # Tools
       k9s
+      kubernetes-helm
       fd # find alternative, mostly used by neovim-telescope
       gonzo # Log analysis
       xh # Friendly curl

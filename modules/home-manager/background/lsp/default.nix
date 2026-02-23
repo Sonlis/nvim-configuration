@@ -27,6 +27,7 @@
           yaml-language-server
           nil
           nixfmt
+          rust-analyzer
           typescript-language-server
           vscode-json-languageserver
           vue-language-server
