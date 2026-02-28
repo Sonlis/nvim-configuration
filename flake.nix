@@ -2,7 +2,7 @@
   description = "Bastibast flake with Home Manager";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -11,6 +11,12 @@
 
     sops-nix = {
       url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    infomanixak = {
+      #url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
+      url = "path:///home/workibast/infomaniak/pink/infoma-nix-ak";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

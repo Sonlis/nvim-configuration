@@ -7,11 +7,11 @@
     profiles.default = {
       name = "Bastibast";
       search = {
-        default = "DuckDuckGo";
-        privateDefault = "DuckDuckGo";
+        default = "ddg";
+        privateDefault = "ddg";
         engines = {
           "youtube" = {
-            iconUpdateURL = "https://youtube.com/favicon.ico";
+            icon = "https://youtube.com/favicon.ico";
             updateInterval = 24 * 60 * 60 * 1000;
             definedAliases = [ "@yt" ];
             urls = [
@@ -27,7 +27,7 @@
             ];
           };
           "github" = {
-            iconUpdateURL = "https://github.com/favicon.ico";
+            icon = "https://github.com/favicon.ico";
             updateInterval = 24 * 60 * 60 * 1000;
             definedAliases = [ "@gh" ];
             urls = [
