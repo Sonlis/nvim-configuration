@@ -5,8 +5,8 @@
     keyMode = "vi";
     shortcut = "a";
     extraConfig = ''
-          bind -T copy-mode-vi y send -X copy-selection
-          # Smart pane switching with awareness of Vim splits.
+      bind -T copy-mode-vi y send -X copy-selection
+      # Smart pane switching with awareness of Vim splits.
       # See: https://github.com/christoomey/vim-tmux-navigator
       vim_pattern='(\S+/)?g?\.?(view|l?n?vim?x?|fzf)(diff)?(-wrapped)?'
       is_vim="ps -o state= -o comm= -t '#{pane_tty}' \

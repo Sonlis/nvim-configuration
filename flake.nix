@@ -15,8 +15,7 @@
     };
 
     infomanixak = {
-      #url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
-      url = "path:///home/workibast/infomaniak/pink/infoma-nix-ak";
+      url = "git+ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

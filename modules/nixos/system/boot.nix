@@ -3,16 +3,6 @@
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
-    plymouth = {
-      enable = true;
-      theme = "pixels";
-      themePackages = with pkgs; [
-        # By default we would install all themes
-        (adi1090x-plymouth-themes.override {
-          selected_themes = [ "pixels" ];
-        })
-      ];
-    };
 
     # Enable "Silent boot"
     consoleLogLevel = 3;
@@ -28,6 +18,15 @@
     # It's still possible to open the bootloader list by pressing any key
     # It will just not appear on screen unless a key is pressed
     loader.timeout = 0;
+  };
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-user-session --cmd niri";
+        user = "greeter";
+      };
+    };
   };
 }

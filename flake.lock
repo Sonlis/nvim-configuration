@@ -26,11 +26,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1772259004,
-        "narHash": "sha256-eOSViq89JyoCSrkno81VfFXZRr2xj31/VznzeZRxt9g=",
+        "lastModified": 1772396254,
+        "narHash": "sha256-TWFWPJMjPKdYSzx4XLCMV6fc/Ov7Lsa7o9fLTb4yQbo=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "654f2ec7ad21720089c6227ffc463c505b4111aa",
+        "rev": "db53a9a719789694f3dc69ca2f36aaf16ae94374",
         "type": "github"
       },
       "original": {
@@ -120,11 +120,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772218752,
-        "narHash": "sha256-G8nArvOTZXU8DRvrzAdz3Elcj6kA/vMtvY9mrGLATtA=",
+        "lastModified": 1772380461,
+        "narHash": "sha256-O3ukj3Bb3V0Tiy/4LUfLlBpWypJ9P0JeUgsKl2nmZZY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f3a30376bb9eb2f6f61816be7d6ed954b6d2a3b9",
+        "rev": "f140aa04d7d14f8a50ab27f3691b5766b17ae961",
         "type": "github"
       },
       "original": {
@@ -143,14 +143,17 @@
         "tool3box": "tool3box"
       },
       "locked": {
-        "lastModified": 1772110898,
-        "narHash": "sha256-3S2yd9IVdortTcDLUVA6EuSPPbAyzaypUtnsikMteNQ=",
-        "path": "/home/workibast/infomaniak/pink/infoma-nix-ak",
-        "type": "path"
+        "lastModified": 1771948263,
+        "narHash": "sha256-4iLdemNjHjmU9HDS0xnuCR7GO7epW9fMlgLCgFFfhd0=",
+        "ref": "refs/heads/main",
+        "rev": "ddd6c92fccd504811e64fdd1b68691c4f5cb0845",
+        "revCount": 42,
+        "type": "git",
+        "url": "ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak"
       },
       "original": {
-        "path": "/home/workibast/infomaniak/pink/infoma-nix-ak",
-        "type": "path"
+        "type": "git",
+        "url": "ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak"
       }
     },
     "nixpkgs": {
@@ -291,11 +294,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1772055014,
-        "narHash": "sha256-fyoXzIvrZ3yD0tLRouPIwMDqDx7/A8Ydhe5oblrmADc=",
+        "lastModified": 1771880344,
+        "narHash": "sha256-Eu8q0Rbh708XoLJ0ACUlCYU0YYDdYxR2t3KJGuqjAvw=",
         "ref": "refs/heads/master",
-        "rev": "b6d6d372c61e37daf3f6b1ee35dcfb1c690325d2",
-        "revCount": 17,
+        "rev": "09d967b0da345de4005b0c789f905d9b77b979d1",
+        "revCount": 16,
         "type": "git",
         "url": "ssh://git@gitlab.infomaniak.ch/bastien.jeannelle/ipinfo"
       },
@@ -323,11 +326,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772048434,
-        "narHash": "sha256-/wA0OaH6kZ/pFA+nXR/tvg5oupOmEDmMS5us79JT60o=",
+        "lastModified": 1772401007,
+        "narHash": "sha256-YHykQg0h9hrlZGpMcywnaFzQ1Kn/5YNCCOSaaAl6z7Q=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "334daa7c273dd8bf7a0cd370e4e16022b64e55e9",
+        "rev": "d8be5ea4cd3bc363492ab5bc6e874ccdc5465fe4",
         "type": "github"
       },
       "original": {
