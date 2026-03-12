@@ -26,11 +26,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1772396254,
-        "narHash": "sha256-TWFWPJMjPKdYSzx4XLCMV6fc/Ov7Lsa7o9fLTb4yQbo=",
+        "lastModified": 1772651876,
+        "narHash": "sha256-GF0+dP5GoagtYRuHwCyVFSj21R2JSUDT49Ew9gecSd8=",
         "owner": "AvengeMedia",
         "repo": "DankMaterialShell",
-        "rev": "db53a9a719789694f3dc69ca2f36aaf16ae94374",
+        "rev": "32d16d067364e3181922bba5f5a5a4f2b0515a7b",
         "type": "github"
       },
       "original": {
@@ -120,11 +120,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772380461,
-        "narHash": "sha256-O3ukj3Bb3V0Tiy/4LUfLlBpWypJ9P0JeUgsKl2nmZZY=",
+        "lastModified": 1772633327,
+        "narHash": "sha256-jl+DJB2DUx7EbWLRng+6HNWW/1/VQOnf0NsQB4PlA7I=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f140aa04d7d14f8a50ab27f3691b5766b17ae961",
+        "rev": "5a75730e6f21ee624cbf86f4915c6e7489c74acc",
         "type": "github"
       },
       "original": {
@@ -143,11 +143,11 @@
         "tool3box": "tool3box"
       },
       "locked": {
-        "lastModified": 1771948263,
-        "narHash": "sha256-4iLdemNjHjmU9HDS0xnuCR7GO7epW9fMlgLCgFFfhd0=",
+        "lastModified": 1772488276,
+        "narHash": "sha256-u/sOxRO2hbRASshdGMvT+000bffyjBDusJJaZybwULQ=",
         "ref": "refs/heads/main",
-        "rev": "ddd6c92fccd504811e64fdd1b68691c4f5cb0845",
-        "revCount": 42,
+        "rev": "49818f439a42047f4a56383a3e6afdb1dab4c16e",
+        "revCount": 44,
         "type": "git",
         "url": "ssh://git@gitlab.infomaniak.ch/L3/infoma-nix-ak"
       },
@@ -236,16 +236,16 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1772173633,
-        "narHash": "sha256-MOH58F4AIbCkh6qlQcwMycyk5SWvsqnS/TCfnqDlpj4=",
+        "lastModified": 1772542754,
+        "narHash": "sha256-WGV2hy+VIeQsYXpsLjdr4GvHv5eECMISX1zKLTedhdg=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c0f3d81a7ddbc2b1332be0d8481a672b4f6004d6",
+        "rev": "8c809a146a140c5c8806f13399592dbcb1bb5dc4",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -294,11 +294,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1771880344,
-        "narHash": "sha256-Eu8q0Rbh708XoLJ0ACUlCYU0YYDdYxR2t3KJGuqjAvw=",
+        "lastModified": 1772401399,
+        "narHash": "sha256-Rmh4pksdmXNUPmWHl1h41i++jhMCkp5RYbNdLeOwl+E=",
         "ref": "refs/heads/master",
-        "rev": "09d967b0da345de4005b0c789f905d9b77b979d1",
-        "revCount": 16,
+        "rev": "aeb8e015e05ca3f853854e69e586517b69c59427",
+        "revCount": 19,
         "type": "git",
         "url": "ssh://git@gitlab.infomaniak.ch/bastien.jeannelle/ipinfo"
       },
@@ -326,11 +326,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772401007,
-        "narHash": "sha256-YHykQg0h9hrlZGpMcywnaFzQ1Kn/5YNCCOSaaAl6z7Q=",
+        "lastModified": 1772495394,
+        "narHash": "sha256-hmIvE/slLKEFKNEJz27IZ8BKlAaZDcjIHmkZ7GCEjfw=",
         "owner": "Mic92",
         "repo": "sops-nix",
-        "rev": "d8be5ea4cd3bc363492ab5bc6e874ccdc5465fe4",
+        "rev": "1d9b98a29a45abe9c4d3174bd36de9f28755e3ff",
         "type": "github"
       },
       "original": {

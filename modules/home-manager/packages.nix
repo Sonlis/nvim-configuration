@@ -26,6 +26,7 @@
       k9s
       kubernetes-helm
       fd # find alternative, mostly used by neovim-telescope
+      glab # gitlab cli
       gonzo # Log analysis
       xh # Friendly curl
       networkmanagerapplet

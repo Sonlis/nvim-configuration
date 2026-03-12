@@ -13,6 +13,8 @@
     vim
     wget
     wireguard-tools
+    woeusb
+    woeusb-ng
   ];
   services = {
     udev = {

@@ -5,8 +5,7 @@
   ];
   services = {
     netbird = {
-      enable = true;
-      tunnels = {
+      clients = {
         perso = {
           port = 51820;
           environment = {

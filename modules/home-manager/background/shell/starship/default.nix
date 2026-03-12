@@ -57,15 +57,6 @@ let
       mantle = "#e6e9ef";
       crust = "#dce0e8";
     };
-    rose-pine = {
-      overlay = "#26233a";
-      love = "#eb6f92";
-      gold = "#f6c177";
-      rose = "#ebbcba";
-      pine = "#31748f";
-      foam = "#9ccfd8";
-      iris = "#c4a7e7";
-    };
   };
 in
 {
