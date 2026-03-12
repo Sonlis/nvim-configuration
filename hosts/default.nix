@@ -12,6 +12,9 @@ let
 
     # Work
     workibast.usernames = [ "workibast" ];
+
+    # Desktop
+    desktopbast.usernames = [ "bastibast" ];
   };
 
 in

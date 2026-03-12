@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./development
+    ./gaming
     ./foreground
     ./background
     ./theme
