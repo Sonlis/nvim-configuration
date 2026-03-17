@@ -1,6 +1,7 @@
 require("autocmd")
 require("remap")
 require("set")
+require("lsp")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -19,4 +20,5 @@ require("lazy").setup({
     spec = { { import = "plugins" } },
 })
 
-vim.lsp.enable({ "bashls", "clangd", "gopls", "jsonlsp", "lua_ls", "nil", "ruff", "rust_analyzer", "ty", "vue", "vtsls" })
+vim.lsp.enable({ "bashls", "clangd", "gopls", "jsonlsp", "lua_ls", "nil", "ruff", "rust_analyzer", "ty", "vue", "vtsls",
+    "yamlls" })
