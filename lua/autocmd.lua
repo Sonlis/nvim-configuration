@@ -84,6 +84,7 @@ vim.api.nvim_create_autocmd('UILeave', {
     end,
 })
 
+-- Format file on save
 vim.api.nvim_create_autocmd("BufWritePre", {
     group = on_save,
     buffer = bufnr,
@@ -102,6 +103,15 @@ vim.api.nvim_create_autocmd("FileType", {
     group = vim.api.nvim_create_augroup("no_auto_comment", {}),
     callback = function()
         vim.opt_local.formatoptions:remove({ "c", "r", "o" })
+    end,
+})
+
+-- Use tree sitter as folder
+vim.api.nvim_create_autocmd("FileType", {
+    group = vim.api.nvim_create_augroup("treesitter_folder", {}),
+    callback = function()
+        vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+        vim.wo[0][0].foldmethod = 'expr'
     end,
 })
 
