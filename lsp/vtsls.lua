@@ -7,7 +7,6 @@ local vue_plugin = {
     configNamespace = 'typescript',
 }
 
----@type vim.lsp.Config
 local ts_ls_config = {
     cmd = { "vtsls", "--stdio" },
     init_options = {
