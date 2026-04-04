@@ -1,4 +1,5 @@
-vim.pack.add({ 'https://github.com/stevearc/oil.nvim', 'https://github.com/refractalize/oil-git-status.nvim' })
+vim.pack.add({ 'https://github.com/stevearc/oil.nvim', 'https://github.com/refractalize/oil-git-status.nvim',
+    "https://github.com/nvim-mini/mini.icons" })
 
 
 require('oil').setup({
@@ -17,3 +18,4 @@ require('oil').setup({
 })
 
 require('oil-git-status').setup()
+require('mini.icons').setup()
