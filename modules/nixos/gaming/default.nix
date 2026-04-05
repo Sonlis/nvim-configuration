@@ -1,6 +1,6 @@
 { ... }:
 {
   imports = [
-    ./battlenet.nix
+    ./steam.nix
   ];
 }

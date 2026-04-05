@@ -5,7 +5,7 @@ in
 {
   programs.foot = {
     settings = {
-      colors = {
+      colors-dark = {
         alpha = "${colors.foot.alpha}";
         background = "${colors.foot.background}";
         foreground = "${colors.foot.foreground}";

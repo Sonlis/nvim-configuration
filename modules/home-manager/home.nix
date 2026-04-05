@@ -4,10 +4,9 @@ let
 in
 {
   imports = [
-    ./development
-    ./gaming
-    ./foreground
     ./background
+    ./development
+    ./foreground
     ./theme
 
     ./packages.nix

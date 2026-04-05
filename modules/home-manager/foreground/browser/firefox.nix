@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   #home.file.".mozilla/firefox/nix-user-profile/chrome/firefox-rose-pine-theme" = inputs.firefox-rose-pine-theme;
   programs.firefox = {
@@ -42,10 +42,55 @@
               }
             ];
           };
+          "Nix Packages" = {
+            urls = [
+              {
+                template = "https://search.nixos.org/packages";
+                params = [
+                  {
+                    name = "channel";
+                    value = "unstable";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@np" ];
+          };
+
+          "Nix Options" = {
+            urls = [
+              {
+                template = "https://search.nixos.org/options";
+                params = [
+                  {
+                    name = "channel";
+                    value = "unstable";
+                  }
+                  {
+                    name = "query";
+                    value = "{searchTerms}";
+                  }
+                ];
+              }
+            ];
+            icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            definedAliases = [ "@no" ];
+          };
         };
       };
     };
     policies = {
+      FirefoxHome = {
+        Search = false;
+      };
+      SearchBar = "unified";
+      DisplayBookmarksToolbar = "never";
+      DisplayMenuBar = "never";
       DisableTelemetry = true;
       DisableFirefoxStudies = true;
       EnableTrackingProtection = {

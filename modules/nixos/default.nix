@@ -2,6 +2,7 @@
 {
   imports = [
     ./environment
+    ./gaming
     ./gui
     ./network
     ./system

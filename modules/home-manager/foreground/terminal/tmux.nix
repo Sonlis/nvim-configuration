@@ -5,6 +5,9 @@
     keyMode = "vi";
     shortcut = "a";
     extraConfig = ''
+      set-option -sg escape-time 10 # For nvim navigator
+      set-option -g focus-events on
+      set-option -g default-terminal "screen-256color"
       bind -T copy-mode-vi y send -X copy-selection
       # Smart pane switching with awareness of Vim splits.
       # See: https://github.com/christoomey/vim-tmux-navigator

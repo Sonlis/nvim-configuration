@@ -26,8 +26,10 @@
       k9s
       kubernetes-helm
       fd # find alternative, mostly used by neovim-telescope
+      flamegraph
       glab # gitlab cli
       gonzo # Log analysis
+      openssl
       xh # Friendly curl
       networkmanagerapplet
       openstackclient
@@ -56,7 +58,6 @@
       discord
       nautilus
       qimgv # Image viewer
-      netbird
       ytmdesktop
     ];
 
