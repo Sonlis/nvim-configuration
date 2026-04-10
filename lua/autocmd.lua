@@ -106,14 +106,17 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- Use tree sitter as folder
-vim.api.nvim_create_autocmd("FileType", {
-    group = vim.api.nvim_create_augroup("treesitter_folder", {}),
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'rust', 'python', 'typescript' },
     callback = function()
-        vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-        vim.wo[0][0].foldmethod = 'expr'
+        vim.treesitter.start()                                            -- highlighting
+        vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'               -- folds
+        vim.wo.foldmethod = 'expr'
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" -- indentation
     end,
 })
+
 
 -- syntax highlighting for dotenv files
 vim.api.nvim_create_autocmd("BufRead", {

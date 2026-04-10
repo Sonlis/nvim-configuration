@@ -33,3 +33,5 @@ vim.g.nord_contrast = true
 
 -- Do not fold on startup
 vim.opt.foldenable = false
+
+vim.diagnostic.config { jump = { on_jump = vim.diagnostic.open_float } }

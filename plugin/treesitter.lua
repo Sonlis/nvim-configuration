@@ -1,4 +1,4 @@
-vim.pack.add({ { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master" } })
+vim.pack.add({ { src = "https://github.com/neovim-treesitter/nvim-treesitter", version = "main" } })
 
 require('nvim-treesitter').setup({
     auto_install = true,
