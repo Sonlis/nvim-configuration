@@ -1,11 +1,17 @@
 vim.pack.add({ { src = "https://github.com/neovim-treesitter/nvim-treesitter", version = "main" } })
 
-require('nvim-treesitter').setup({
-    auto_install = true,
-    sync_install = false,
-    highlight = {
-        enable = true
-    }
+local languages = { 'rust', 'python', 'typescript', "yaml", "go", "json" }
+
+require('nvim-treesitter').install(languages)
+
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = languages,
+    callback = function()
+        vim.treesitter.start()                                            -- highlighting
+        vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'               -- folds
+        vim.wo.foldmethod = 'expr'
+        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" -- indentation
+    end,
 })
 
 vim.api.nvim_create_autocmd('PackChanged', {
