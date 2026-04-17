@@ -5,6 +5,7 @@
     keyMode = "vi";
     shortcut = "a";
     extraConfig = ''
+      bind-key -T copy-mode-vi v send-keys -X begin-selection
       set-option -sg escape-time 10 # For nvim navigator
       set-option -g focus-events on
       set-option -g default-terminal "screen-256color"

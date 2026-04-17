@@ -1,4 +1,4 @@
-{ config, inputs, ... }:
+{ config, ... }:
 let
   inherit (config) user;
 in
@@ -7,9 +7,9 @@ in
     ./background
     ./development
     ./foreground
-    ./theme
 
     ./packages.nix
+    ./theme.nix
     #./secrets.nix
   ];
 

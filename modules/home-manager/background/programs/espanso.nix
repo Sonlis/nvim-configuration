@@ -16,13 +16,13 @@ in
       configs = {
         default = {
           keyboard_layout = {
-            layout = "'us'";
+            layout = "us";
           };
         };
       };
       matches = {
         default = {
-          base = cfg.matches;
+          matches = cfg.matches;
         };
       };
     };

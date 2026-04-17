@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  #home.file.".mozilla/firefox/nix-user-profile/chrome/firefox-rose-pine-theme" = inputs.firefox-rose-pine-theme;
   programs.firefox = {
     enable = true;
     languagePacks = [ "en" ];

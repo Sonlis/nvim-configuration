@@ -6,7 +6,8 @@
       "wheel"
       "networkmanager"
       "greeter"
-    ]; # Enable ‘sudo’ for the user.
+      "input" # needed for espanso
+    ];
     shell = pkgs.fish;
   };
 

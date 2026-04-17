@@ -24,6 +24,8 @@
 
       # Tools
       k9s
+      fluxcd
+      vault
       kubernetes-helm
       fd # find alternative, mostly used by neovim-telescope
       flamegraph
