@@ -19,8 +19,6 @@ let
         // Expel the bottom window from the focused column to the right.
         Mod+Slash { expel-window-from-column; }
 
-        Mod+E hotkey-overlay-title="Run an Application: walker" { spawn "walker"; }
-
         // Open/close the Overview: a zoomed-out view of workspaces and windows.
         // You can also move the mouse into the top-left hot corner,
         // or do a four-finger swipe up on a touchpad.
