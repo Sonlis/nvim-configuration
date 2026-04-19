@@ -4,4 +4,13 @@ require('catppuccin').setup({
     transparent_background = false
 })
 
-vim.cmd.colorscheme "catppuccin-nvim"
+vim.pack.add({ { src = "https://github.com/rose-pine/neovim", name = "rose-pine" } })
+require("rose-pine").setup({
+    styles = {
+        bold = true,
+        italic = true,
+        transparency = true,
+    },
+})
+
+vim.cmd.colorscheme "rose-pine"
