@@ -17,6 +17,10 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
+    "helm-ls.nvim": {
+      "rev": "20df43509b02a3ce3c6b3eee254d6e2bffa9a370",
+      "src": "https://github.com/qvalentin/helm-ls.nvim"
+    },
     "mini.icons": {
       "rev": "7fdae2443a0e2910015ca39ad74b50524ee682d3",
       "src": "https://github.com/nvim-mini/mini.icons"
