@@ -2,7 +2,7 @@
 {
   config = {
     shell.main = "fish";
-    theme = "catppuccin_mocha";
+    theme = "rose-pine";
     desktop = "niri";
     terminal = {
       main = "foot";
