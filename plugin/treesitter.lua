@@ -3,6 +3,9 @@ vim.pack.add({ { src = "https://github.com/neovim-treesitter/nvim-treesitter", v
 local languages = { "rust", "nix", "python", "typescript", "yaml", "go", "json", "terraform", "helm" }
 
 require('nvim-treesitter').install(languages)
+---require('treesitter-context').setup {
+---    max_lines = 4,
+---}
 
 vim.api.nvim_create_autocmd('FileType', {
     pattern = languages,

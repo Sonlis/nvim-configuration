@@ -17,10 +17,6 @@
       "rev": "6cd7280adead7f586db6fccbd15d2cac7e2188b9",
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
-    "helm-ls.nvim": {
-      "rev": "20df43509b02a3ce3c6b3eee254d6e2bffa9a370",
-      "src": "https://github.com/qvalentin/helm-ls.nvim"
-    },
     "mini.icons": {
       "rev": "7fdae2443a0e2910015ca39ad74b50524ee682d3",
       "src": "https://github.com/nvim-mini/mini.icons"
@@ -33,6 +29,11 @@
       "rev": "41218025408be671ec17e173844a5e2079d5a1bf",
       "src": "https://github.com/neovim-treesitter/nvim-treesitter",
       "version": "'main'"
+    },
+    "obsidian.nvim": {
+      "rev": "2a8af7bd141123c7911fd0956ad986f29fe5bf12",
+      "src": "https://github.com/obsidian-nvim/obsidian.nvim",
+      "version": ">=0.0.0"
     },
     "oil-git-status.nvim": {
       "rev": "a3e2ccb00cb8822115e28a9a1791eda051d940c9",
