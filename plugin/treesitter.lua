@@ -1,6 +1,6 @@
 vim.pack.add({ { src = "https://github.com/neovim-treesitter/nvim-treesitter", version = "main" } })
 
-local languages = { "rust", "nix", "python", "typescript", "yaml", "go", "json", "terraform", "helm" }
+local languages = { "rust", "nix", "python", "typescript", "yaml", "go", "json", "terraform", "helm", "jinja" }
 
 require('nvim-treesitter').install(languages)
 ---require('treesitter-context').setup {
