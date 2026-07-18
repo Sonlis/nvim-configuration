@@ -1,7 +1,19 @@
 vim.pack.add({ "https://github.com/nvim-telescope/telescope.nvim", "https://github.com/nvim-lua/plenary.nvim",
     'https://github.com/nvim-telescope/telescope-fzf-native.nvim' })
 
-require('telescope').setup()
+require('telescope').setup {
+    defaults = {
+        mappings = {
+            n = {
+                ['<c-d>'] = require('telescope.actions').delete_buffer
+            },
+            i = {
+                ['<c-d>'] = require('telescope.actions').delete_buffer
+            }
+        }
+    }
+}
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader> ', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
